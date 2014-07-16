@@ -259,69 +259,316 @@ public class Main {
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.StreamTokenizer;
- 
-public class Main{
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+public class Main {
     /*
-     * 1002 2014年07月16日16:20:45
+     * 1007
      */
     public static void main(String[] args) throws Exception{
         StreamTokenizer st = new StreamTokenizer(new BufferedReader(
-                    new InputStreamReader(System.in)));
-        while(st.nextToken() != StreamTokenizer.TT_EOF){
-            int m = (int)st.nval;
-            if(m == 0){
-                break;
-            }
+						new InputStreamReader(System.in)));
+        while (st.nextToken() != StreamTokenizer.TT_EOF) {
+            int n = (int) st.nval;
             st.nextToken();
-            int n = (int)st.nval;
-            int matrix[][] = new int[m][n];
-            for(int i = 0 ; i < m; i++){
-                for(int j = 0; j < n; j++){
-                    st.nextToken();
-                    matrix[i][j] = (int)st.nval;
-                }
+            int m = (int) st.nval;
+            Map<Integer, Double[]> numMap =
+							new HashMap<Integer, Double[]>();
+            List<Double[]> counList = new ArrayList<Double[]>();
+            for (int i = 0; i < n; i++) {
+                Double[]country = new Double[5];
+                country[0] = (double)i;
+                st.nextToken();
+                country[1] = (double)(int) st.nval;
+                st.nextToken();
+                country[2] = (double)(int) st.nval;
+                st.nextToken();
+                int allNum = (int) st.nval;
+                country[3] = country[1]/allNum;
+                country[4] = country[2]/allNum;
+                numMap.put(i, country);
+                counList.add(country);
             }
- 
-            for(int i = 0 ; i < m; i++){
-                for(int j = 0; j < n; j++){
-                    st.nextToken();
-                    matrix[i][j] += (int)st.nval;
-                }
-            }
-            int zeroNum = 0;
+            List<Integer> needNumList = new ArrayList<Integer>();
             for (int i = 0; i < m; i++) {
-                boolean isZero = true;
+                st.nextToken();
+                int needNum = (int)st.nval;
+                needNumList.add(needNum);
+            }
+
+            for (int i = 0; i < m; i++) {
+                int needNum = needNumList.get(i);
+                Double[]country = new Double[5];
+                country = numMap.get(needNum);
+                int rank[] = {1,1,1,1};
                 for (int j = 0; j < n; j++) {
-                    if (matrix[i][j] != 0) {
-                        isZero = false;
-                        break;
+                    Double []newCou = counList.get(j);
+                    if (!needNumList.contains(
+							(int)(double)newCou[0])) {
+                        continue;
+                    }
+                    if ((double)newCou[0] == (double)needNum) {
+                        continue;
+                    }
+                    if (country[1] < newCou[1]) {
+                        rank[0]++;
+                    }
+                    if (country[2] < newCou[2]) {
+                        rank[1]++;
+                    }
+                    if (country[3] < newCou[3]) {
+                        rank[2]++;
+                    }
+                    if (country[4] < newCou[4]) {
+                        rank[3]++;
                     }
                 }
-                if (isZero) {
-                    zeroNum++;
-                }
-            }
-            for (int j = 0; j < n; j++) {
-                boolean isZero = true;
-                for (int i = 0; i < m; i++) {
-                    if (matrix[i][j] != 0) {
-                        isZero = false;
-                        break;
+                int high = n+1;
+                int seq = 0;
+                for (int j = 0; j < 4; j++) {
+                    if (rank[j] < high) {
+                        high = rank[j];
+                        seq = j;
                     }
                 }
-                if (isZero) {
-                    zeroNum++;
-                }
+                System.out.println(high+":"+(seq+1));
             }
-            System.out.println(zeroNum);
+            System.out.println();
         }
     }
 }
 /**************************************************************
-    Problem: 1001
+    Problem: 1007
+    User: wzqwsrf
+    Language: Java
+    Result: Accepted
+    Time:70 ms
+    Memory:14616 kb
+****************************************************************/
+
+// 题目1012：畅通工程
+/* @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2014年07月16日18:47:19
+ * @url：http://ac.jobdu.com/problem.php?pid=1012
+ * 并查集的典型应用。
+ * 求出并查集的个数，再减去1就是需要修的道路数目
+ * 解题思路参考http://blog.csdn.net/u013027996/article/details/17165557
+ */
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.StreamTokenizer;
+import java.util.HashSet;
+import java.util.Set;
+
+public class Main {
+    /*
+     * 1012
+     */
+    private static int parent[];
+    public static void main(String[] args) throws Exception{
+        StreamTokenizer st = new StreamTokenizer(new BufferedReader(
+                new InputStreamReader(System.in)));
+        while (st.nextToken() != StreamTokenizer.TT_EOF) {
+            int n = (int) st.nval;
+            if (n == 0) {
+                break;
+            }
+            parent = new int[n + 1];
+            for (int i = 1; i <= n; i++) {
+                parent[i] = i;
+            }
+            st.nextToken();
+            int m = (int) st.nval;
+            for (int i = 0; i < m; i++) {
+                st.nextToken();
+                int f = (int) st.nval;
+                st.nextToken();
+                int t = (int) st.nval;
+                union(f, t);
+            }
+
+            for (int i = 1; i < n + 1; i++) {
+                parent[i] = findParent(i);
+            }
+            Set<Integer> numSet = new HashSet<Integer>();
+            for (int i = 1; i < n + 1; i++) {
+                numSet.add(parent[i]);
+            }
+            System.out.println(numSet.size() - 1);
+        }
+    }
+    private static void union(int f, int t) {
+        int a = findParent(f);
+        int b = findParent(t);
+        if (a == b) return;
+        if (a > b) {
+            parent[a] = b;
+         } else {
+            parent[b] = a;
+         }
+    }
+    private static int findParent(int f) {
+        while (parent[f] != f) {
+            f = parent[f];
+        }
+        return f;
+    }
+}
+
+/**************************************************************
+    Problem: 1012
     User: wangzhenqing
     Language: Java
     Result: Accepted
-    Time:690 ms
-    Memory:14584 kb
+    Time:180 ms
+    Memory:23560 kb
+****************************************************************/
+
+// 题目1013：开门人和关门人
+/* @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2014年07月16日18:53:58
+ * @url：http://ac.jobdu.com/problem.php?pid=1013
+ * 不需要用sort全部排序。
+ * 在输入数据的时候，直接比较开始时间和结束时间。
+ * 小于或者大于的时候更新。
+ * 解题思路参考http://blog.csdn.net/u013027996/article/details/17252013
+ */
+
+import java.util.Scanner;
+public class Main {
+    /*
+     * 1013
+     */
+    public static void main(String[] args){
+        Scanner scanner = new Scanner(System.in);
+        while (scanner.hasNext()) {
+            int N = scanner.nextInt();
+            for (int i = 0; i < N; i++) {
+                int M = scanner.nextInt();
+                String id = scanner.next();
+                String firstStr = scanner.next();
+                String secStr = scanner.next();
+                String firstId = id;
+                String lastId = id;
+                for (int j = 1; j < M; j++) {
+                    String newId = scanner.next();
+                    String newFirstStr = scanner.next();
+                    String newSecStr = scanner.next();
+                    if (newFirstStr.compareTo(firstStr) < 0 ) {
+                        firstId = newId;
+                    }
+                    if (newSecStr.compareTo(secStr) > 0) {
+                        lastId = newId;
+                    }
+                }
+                System.out.println(firstId+" "+lastId);
+            }
+        }
+    }
+}
+/**************************************************************
+    Problem: 1013
+    User: wangzhenqing
+    Language: Java
+    Result: Accepted
+    Time:80 ms
+    Memory:15464 kb
+****************************************************************/
+
+// 题目1018：统计同成绩学生人数
+/* @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2014年07月16日18:58:46
+ * @url：http://ac.jobdu.com/problem.php?pid=1018
+ * 本题目技巧在于数组的巧妙使用。
+ * 将数据具体内容当做另外一个数组下标，统计同成绩人数。
+ * 解题思路参考http://blog.csdn.net/u013027996/article/details/17186375
+ */
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+import java.io.StreamTokenizer;
+  
+public class Main {
+    /*
+     * 1018
+     */
+    public static void main(String[] args) throws Exception{
+        StreamTokenizer st = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+        while (st.nextToken() != StreamTokenizer.TT_EOF) {
+            int n = (int) st.nval;
+            if (n == 0) {
+                break;
+            }
+            int array[] = new int[n];
+            int numArr[] = new int[102];
+            for (int i = 0; i < n; i++) {
+                st.nextToken();
+                array[i] = (int)st.nval;
+                numArr[array[i]]++;
+            }
+            st.nextToken();
+            int score = (int)st.nval;
+            System.out.println(numArr[score]);
+        }
+    }
+}
+ 
+/**************************************************************
+    Problem: 1018
+    User: wangzhenqing
+    Language: Java
+    Result: Accepted
+    Time:150 ms
+    Memory:22828 kb
+****************************************************************/
+
+
+// 题目1021：统计字符
+/* @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2014年07月16日19:03:35
+ * @url：http://ac.jobdu.com/problem.php?pid=1021
+ * 用两个数组统计，一次循环即可搞定，输出即可。
+ * 解题思路参考http://blog.csdn.net/u013027996/article/details/17187077
+ */
+
+import java.util.Scanner;
+public class Main {
+    /*
+     * 1021
+     */
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        while (scanner.hasNextLine()) {
+            String a = scanner.nextLine();
+            if (a.equals("#")){
+                 break;
+            }
+            int numArr[] = new int[200];
+            String b = scanner.nextLine();
+            int len1 = a.length();
+            int len2 = b.length();
+            for (int i = 0; i < len2; i++) {
+                numArr[b.charAt(i)]++;
+            }
+            for (int i = 0; i < len1; i++) {
+                System.out.println(a.charAt(i)+" "+numArr[a.charAt(i)]);
+            }
+        }
+    }
+}
+/**************************************************************
+    Problem: 1021
+    User: wangzhenqing
+    Language: Java
+    Result: Accepted
+    Time:80 ms
+    Memory:15456 kb
 ****************************************************************/

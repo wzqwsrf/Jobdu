@@ -6,6 +6,7 @@
  * 并查集变形，比一般并查集稍难，重点在理清思路
  * 解题思路参考http://blog.csdn.net/u013027996/article/details/17101513
  */
+
 #include <stdio.h>
 #include <map>
 #include <vector>
@@ -170,6 +171,9 @@ int main(){
     Memory:1096 kb
 ****************************************************************/
 
+
+
+//======================================
 // 目1529：棋盘寻宝
 /* @author:wangzq
  * @email:wangzhenqing1008@163.com
@@ -184,17 +188,18 @@ int main(){
  * dp[i][j] = max(dp[i-1][j], dp[i][j-1])+array[i][j];
  * 解题思路参考http://blog.csdn.net/u013027996/article/details/25304325
  */
+
 #include<stdio.h>
 #include<string.h>
 const int len = 8;
 int array[len][len];
 int dp[len][len];
 int i, j;
- 
+
 int max(int a,int b){
     return a > b ? a : b;
 }
- 
+
 int main(){
     while(scanf("%d",&array[0][0]) != EOF){
         memset(dp, 0, sizeof(dp));
@@ -223,7 +228,6 @@ int main(){
     }
     return 0;
 }
-
 /**************************************************************
     Problem: 1529
     User: wangzhenqing
@@ -233,6 +237,9 @@ int main(){
     Memory:1020 kb
 ****************************************************************/
 
+
+
+//======================================
 // 题目1001：A+B for Matrices
 /* @author:wangzq
  * @email:wangzhenqing1008@163.com
@@ -305,6 +312,8 @@ int main(){
 ****************************************************************/
 
 
+
+//======================================
 // 题目1007：奥运排序问题
 /* @author:wangzq
  * @email:wangzhenqing1008@163.com
@@ -376,7 +385,6 @@ int main(){
     }
     return 0;
 }
- 
 /**************************************************************
     Problem: 1007
     User: wangzhenqing
@@ -386,6 +394,9 @@ int main(){
     Memory:3756 kb
 ****************************************************************/
 
+
+
+//======================================
 // 题目1012：畅通工程
 /* @author:wangzq
  * @email:wangzhenqing1008@163.com
@@ -458,6 +469,9 @@ int main(){
     Memory:1024 kb
 ****************************************************************/
 
+
+
+//======================================
 // 题目1013：开门人和关门人
 /* @author:wangzq
  * @email:wangzhenqing1008@163.com
@@ -526,6 +540,9 @@ int main(){
     Memory:1908 kb
 ****************************************************************/
 
+
+
+//======================================
 // 题目1018：统计同成绩学生人数
 /* @author:wangzq
  * @email:wangzhenqing1008@163.com
@@ -561,7 +578,6 @@ int main(){
     }
     return 0;
 }
-
 /**************************************************************
     Problem: 1018
     User: wangzhenqing
@@ -571,6 +587,9 @@ int main(){
     Memory:1024 kb
 ****************************************************************/
 
+
+
+//======================================
 // 题目1021：统计字符
 /* @author:wangzq
  * @email:wangzhenqing1008@163.com
@@ -614,3 +633,459 @@ int main(){
     Time:0 ms
     Memory:1020 kb
 ****************************************************************/
+
+
+
+//======================================
+// 题目1023：EXCEL排序
+/* @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2014年07月17日10:05:10
+ * @url：http://ac.jobdu.com/problem.php?pid=1023
+ * 对象排序，实现C++使用sort，Java使用Arrays.sort。
+ * 解题思路参考http://blog.csdn.net/u013027996/article/details/17219709
+ */
+
+#include <stdio.h>
+#include <algorithm>
+#include<string.h>
+using namespace std;
+const int maxn = 100002;
+struct Student{
+    char stuNo[10];
+    char name[10];
+    int score;
+}students[maxn];
+int n , c , i;
+bool cmp1(Student s1 , Student s2){
+    return strcmp(s1.stuNo , s2.stuNo)<0;
+}
+bool cmp2(Student s1 , Student s2){
+    int tmp = strcmp(s1.name , s2.name) ;
+    if(tmp == 0){
+        return strcmp(s1.stuNo , s2.stuNo)<0;
+    }else {
+        return tmp < 0;
+    }
+}
+bool cmp3(Student s1 , Student s2){
+    if(s1.score == s2.score){
+        return strcmp(s1.stuNo , s2.stuNo)<0;
+    }else {
+        return s1.score < s2.score;
+    }
+}
+int main(){
+    int k = 1;
+    while(scanf("%d%d",&n,&c) != EOF){
+        if(n == 0) break;
+        for(i = 0; i < n; i++){
+            scanf("%s %s %d",&students[i].stuNo,&students[i].name,&students[i].score);
+        }
+        if(c==1){
+            sort(students, students+n, cmp1);
+        }else if(c==2) {
+            sort(students, students+n, cmp2);
+        }else {
+            sort(students, students+n, cmp3);
+        }
+        printf("Case %d:\n",k);
+        for(i = 0; i < n; i++){
+            printf("%s %s %d\n",students[i].stuNo,students[i].name,students[i].score);
+        }
+        k++;
+    }
+    return 0;
+}
+/**************************************************************
+    Problem: 1023
+    User: wangzhenqing
+    Language: C++
+    Result: Accepted
+    Time:100 ms
+    Memory:3368 kb
+****************************************************************/
+
+
+
+//======================================
+// 题目1024：畅通工程
+/* @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2014年07月17日10:19:32
+ * @url：http://ac.jobdu.com/problem.php?pid=1024
+ * 并查集变形
+ * 解题思路参考http://blog.csdn.net/u013027996/article/details/17166249
+ */
+
+#include<stdio.h>
+#include<algorithm>
+const int maxn = 102;
+const int maxm = 102;
+int parent[maxn];
+using namespace std;
+struct Node{
+    int start;
+    int end;
+    int value;
+}nodes[maxm];
+
+int compare(Node node1 ,Node node2){
+    if(node1.value < node2.value){
+        return 1;
+    }
+    return 0;
+}
+
+int findParent(int f) {
+     while (parent[f] != f) {
+        f = parent[f];
+    }
+    return f;
+}
+
+void unionTwo(int f, int t) {
+    int a = findParent(f);
+    int b = findParent(t);
+    if (a == b)
+        return;
+    if (a > b) {
+        parent[a] = b;
+    } else {
+        parent[b] = a;
+    }
+}
+
+int main(){
+
+    int n;
+    int m;
+    while(scanf("%d%d",&m,&n)!=EOF){
+        if(m == 0){
+            break;
+        }
+        int i = 0;
+        for(i=0; i < m; i++){
+            scanf("%d%d%d" , &nodes[i].start, &nodes[i].end, &nodes[i].value);
+        }
+        sort(nodes,nodes+m,compare);
+        for(i = 1; i < n+1 ; i++){
+            parent[i] = i;
+        }
+        int minValue = 0;
+        int count = 0;
+        for (i = 0; i < m; i++) {
+            if (findParent(nodes[i].start) != findParent(nodes[i].end)) {
+                unionTwo(nodes[i].start,nodes[i].end);
+                minValue += nodes[i].value;
+                count++;
+                if(count == n-1){
+                    break;
+                }
+            }
+        }
+        if(count < n-1){
+            printf("?\n");
+        }else{
+            printf("%d\n", minValue);
+        }
+
+    }
+    return 0;
+}
+/**************************************************************
+    Problem: 1024
+    User: wangzhenqing
+    Language: C++
+    Result: Accepted
+    Time:10 ms
+    Memory:1024 kb
+****************************************************************/
+
+
+
+//======================================
+// 题目1025：最大报销额
+/* @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2014年07月17日10:37:07
+ * @url：http://ac.jobdu.com/problem.php?pid=1025
+ * 1、处理数据
+ * 2、01背包
+ * 解题思路参考http://blog.csdn.net/u013027996/article/details/19124427
+ */
+
+#include <stdio.h>
+const int maxn = 32;
+int n,i;
+double q;
+int numArr[32];
+int max(int a, int b){
+    return a > b ? a : b;
+}
+int main(){
+    while(scanf("%lf %d",&q,&n) != EOF){
+        if(n == 0){
+            break;
+        }
+        int len = 0;
+        while (n > 0) {
+            double A = 0;
+            double B = 0;
+            double C = 0;
+            double price;
+            int valid = 0;
+            char c;
+            int m;
+            scanf("%d",&m);
+            while (m > 0) {
+                getchar();
+                scanf("%c:%lf", &c, &price);
+                if (c == 'A') {
+                    A += price;
+                }else if (c == 'B') {
+                    B += price;
+                }else if (c == 'C') {
+                    C += price;
+                }else {
+                    valid = 1;
+                }
+                m--;
+            }
+            if (valid == 0 && A <= 600.00 && B <= 600.00 && C <= 600.00) {
+                double total = A + B + C;
+                if (total <= 1000.00 && total <= q) {
+                    numArr[len] = (int)(total*100);
+                    len++;
+                }
+            }
+            n--;
+        }
+        int hunq = (int) (q * 100);
+        int *dp = new int[hunq + 1];
+        for(i = 0; i < hunq+1; i++){
+            dp[i] = 0;
+        }
+        for (i = 0; i < len; i++) {
+            int tempNum = numArr[i];
+            for (int j = hunq; j >= tempNum; j--) {
+                dp[j] = max(dp[j], dp[j - tempNum] + tempNum );
+            }
+        }
+        double res = (double)(dp[hunq]/100.00);
+        printf("%.2lf\n",res);
+    }
+    return 0;
+}
+/**************************************************************
+    Problem: 1025
+    User: wangzhenqing
+    Language: C++
+    Result: Accepted
+    Time:30 ms
+    Memory:21816 kb
+****************************************************************/
+
+
+
+//======================================
+// 题目1028：继续畅通工程
+/* @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2014年07月17日11:11:52
+ * @url：http://ac.jobdu.com/problem.php?pid=1028
+ * 并查集变形
+ * 解题思路参考http://blog.csdn.net/u013027996/article/details/17166819
+ */
+
+#include<stdio.h>
+#include<algorithm>
+const int maxn = 102;
+const int maxm = 102;
+int parent[maxn];
+using namespace std;
+struct Node{
+    int start;
+    int end;
+    int value;
+}nodes[maxm];
+
+int compare(Node node1 ,Node node2){
+    if(node1.value < node2.value){
+        return 1;
+    }
+    return 0;
+}
+
+int findParent(int f) {
+     while (parent[f] != f) {
+        f = parent[f];
+    }
+    return f;
+}
+
+void unionTwo(int f, int t) {
+    int a = findParent(f);
+    int b = findParent(t);
+    if (a == b)
+        return;
+    if (a > b) {
+        parent[a] = b;
+    } else {
+        parent[b] = a;
+    }
+}
+
+int main(){
+
+    int n;
+    int m;
+    while(scanf("%d",&n)!=EOF){
+        if(n == 0){
+            break;
+        }
+        m = (n-1)*n/2;
+        int i = 0;
+        for(i=0; i < m; i++){
+            int state,value;
+            scanf("%d%d%d%d" , &nodes[i].start, &nodes[i].end, &value, &state);
+            if(state == 1){
+                nodes[i].value = 0;
+            }else{
+                nodes[i].value = value;
+            }
+        }
+        sort(nodes,nodes+m,compare);
+        for(i = 1; i < n+1 ; i++){
+            parent[i] = i;
+        }
+        int minValue = 0;
+        int count = 0;
+        for (i = 0; i < m; i++) {
+            if (findParent(nodes[i].start) != findParent(nodes[i].end)) {
+                unionTwo(nodes[i].start,nodes[i].end);
+                minValue += nodes[i].value;
+                count++;
+                if(count == n-1){
+                    break;
+                }
+            }
+        }
+        if(count < n-1){
+            printf("?\n");
+        }else{
+            printf("%d\n", minValue);
+        }
+    }
+    return 0;
+}
+/**************************************************************
+    Problem: 1028
+    User: wangzhenqing
+    Language: C++
+    Result: Accepted
+    Time:20 ms
+    Memory:1024 kb
+****************************************************************/
+
+
+
+//======================================
+// 题目1040：Prime Number
+/* @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2014年07月17日11:17:18
+ * @url：http://ac.jobdu.com/problem.php?pid=1040
+ * 素数筛除法
+ * 解题思路参考http://blog.csdn.net/u013027996/article/details/35781195
+ */
+
+#include <stdio.h>
+const int len = 200000;
+int array[len];
+int i, j, k;
+ 
+void initArray(){
+    for(i = 1; i < len; i++){
+        if(i % 2 == 0){
+            array[i] = 0;
+        }else{
+            array[i] = 1;
+        }
+    }
+    array[1] = 0;
+    array[2] = 1;
+    for(i = 3; i < len; i++){
+        if(array[i] == 1){
+            for(j = 2 * i; j < len; j += i){
+                array[j] = 0;
+            }
+        }
+    }
+}
+int main(){
+    initArray();
+    while(scanf("%d", &k) != EOF){
+        int count = 0;
+        for(int i = 1; i < len; i++){
+            if(array[i] == 1){
+                count++;
+            }
+            if(count == k){
+                printf("%d\n", i);
+                break;
+            }
+        }
+    }
+    return 0;
+}
+/**************************************************************
+    Problem: 1040
+    User: wangzhenqing
+    Language: C++
+    Result: Accepted
+    Time:10 ms
+    Memory:1800 kb
+****************************************************************/
+
+
+
+//======================================
+// 题目1047：素数判定
+/* @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2014年07月17日11:26:53
+ * @url：http://ac.jobdu.com/problem.php?pid=1047
+ * 常规法判断
+ * 解题思路参考http://blog.csdn.net/u013027996/article/details/36180571
+ */
+
+#include <stdio.h>
+ 
+int main(){
+    int num;
+    while(scanf("%d", &num) != EOF){
+        if(num <= 1){
+            printf("no\n");
+            continue;
+        }
+        bool flag = false;
+        for(int i = 2; i < num; i++){
+            if(num % i == 0){
+                flag = true;
+                break;
+            }
+        }
+        printf(flag ? "no\n" : "yes\n");
+    }
+    return 0;
+}
+/**************************************************************
+    Problem: 1047
+    User: wangzhenqing
+    Language: C++
+    Result: Accepted
+    Time:0 ms
+    Memory:1020 kb
+****************************************************************/
+

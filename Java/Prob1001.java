@@ -5,7 +5,7 @@
  * @author:wangzq
  * @email:wangzhenqing1008@163.com
  * @date:2014年07月16日17:32:32
- * @url：http://ac.jobdu.com/problem.php?pid=1001
+ * @url:http://ac.jobdu.com/problem.php?pid=1001
  * 矩阵相加，求整行和整列为0的行列数。
  * 解题思路参考http://blog.csdn.net/u013027996/article/details/37882211
  */

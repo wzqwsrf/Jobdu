@@ -5,7 +5,7 @@
  * @author:wangzq
  * @email:wangzhenqing1008@163.com
  * @date:2015年02月07日15:43:21
- * @url：http://ac.jobdu.com/problem.php?pid=1530
+ * @url:http://ac.jobdu.com/problem.php?pid=1530
  * 最小滑动窗口
  * 解题思路参考http://blog.csdn.net/u013027996/article/details/17661455
  */

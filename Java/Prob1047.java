@@ -5,7 +5,7 @@
  * @author:wangzq
  * @email:wangzhenqing1008@163.com
  * @date:2014年07月17日11:26:53
- * @url：http://ac.jobdu.com/problem.php?pid=1047
+ * @url:http://ac.jobdu.com/problem.php?pid=1047
  * 常规法判断
  * 解题思路参考http://blog.csdn.net/u013027996/article/details/36180571
  */

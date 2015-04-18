@@ -5,7 +5,7 @@
  * @author:wangzq
  * @email:wangzhenqing1008@163.com
  * @date:2014年07月16日18:58:46
- * @url：http://ac.jobdu.com/problem.php?pid=1018
+ * @url:http://ac.jobdu.com/problem.php?pid=1018
  * 本题目技巧在于数组的巧妙使用。
  * 将数据具体内容当做另外一个数组下标，统计同成绩人数。
  * 解题思路参考http://blog.csdn.net/u013027996/article/details/17186375

@@ -5,7 +5,7 @@
  * @author:wangzq
  * @email:wangzhenqing1008@163.com
  * @date:2014年07月04日11:37:20
- * @url：http://ac.jobdu.com/problem.php?pid=1529
+ * @url:http://ac.jobdu.com/problem.php?pid=1529
  * 简单dp，每次只能往右或者往下走。
  * 1、当在首行时，上一步走到当前步，只能是右走。因此当前拿到礼物的最大价值是前一列拿到礼物的值加上当前礼物的值。
  * dp[i][j] = dp[i][j-1] + array[i][j];

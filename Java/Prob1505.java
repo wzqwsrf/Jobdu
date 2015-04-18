@@ -5,7 +5,7 @@
  * @author:wangzq
  * @email:wangzhenqing1008@163.com
  * @date:2015年02月13日16:45:03
- * @url：http://ac.jobdu.com/problem.php?pid=1505
+ * @url:http://ac.jobdu.com/problem.php?pid=1505
  * 求的是链表第一个值相等的节点
  * 解题思路参考http://blog.csdn.net/u013027996/article/details/43795441
  */

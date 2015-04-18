@@ -5,7 +5,7 @@
  * @author:wangzq
  * @email:wangzhenqing1008@163.com
  * @date:2015年04月15日22:55:10
- * @url：http://ac.jobdu.com/problem.php?pid=1005
+ * @url:http://ac.jobdu.com/problem.php?pid=1005
  */
 
 import java.util.ArrayList;

@@ -6,7 +6,7 @@
  * @email:wangzhenqing1008@163.com
  * @date:2015年04月15日17:45:50
  * 中位数经典算法
- * @url：http://ac.jobdu.com/problem.php?pid=1004
+ * @url:http://ac.jobdu.com/problem.php?pid=1004
  */
 
 import java.util.Arrays;

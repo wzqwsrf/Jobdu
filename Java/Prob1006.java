@@ -5,7 +5,7 @@
  * @author:wangzq
  * @email:wangzhenqing1008@163.com
  * @date:2015年04月15日23:00:23
- * @url：http://ac.jobdu.com/problem.php?pid=1006
+ * @url:http://ac.jobdu.com/problem.php?pid=1006
  */
 
 import java.util.Scanner;

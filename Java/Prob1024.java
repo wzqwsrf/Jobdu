@@ -5,7 +5,7 @@
  * @author:wangzq
  * @email:wangzhenqing1008@163.com
  * @date:2014年07月17日10:32:26
- * @url：http://ac.jobdu.com/problem.php?pid=1024
+ * @url:http://ac.jobdu.com/problem.php?pid=1024
  * 并查集变形
  * 解题思路参考http://blog.csdn.net/u013027996/article/details/17166249
  */

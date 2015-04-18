@@ -5,7 +5,7 @@
  * @author:wangzq
  * @email:wangzhenqing1008@163.com
  * @date:2014年07月16日19:03:35
- * @url：http://ac.jobdu.com/problem.php?pid=1021
+ * @url:http://ac.jobdu.com/problem.php?pid=1021
  * 用两个数组统计，一次循环即可搞定，输出即可。
  * 解题思路参考http://blog.csdn.net/u013027996/article/details/17187077
  */

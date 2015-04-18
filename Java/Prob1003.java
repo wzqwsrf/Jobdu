@@ -6,7 +6,7 @@
  * @email:wangzhenqing1008@163.com
  * @date:2015年04月15日10:02:07
  * 简单加法，注意int有可能越界
- * @url：http://ac.jobdu.com/problem.php?pid=1003
+ * @url:http://ac.jobdu.com/problem.php?pid=1003
  */
 
 import java.util.Scanner;

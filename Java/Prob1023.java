@@ -5,7 +5,7 @@
  * @author:wangzq
  * @email:wangzhenqing1008@163.com
  * @date:2014年07月17日10:05:10
- * @url：http://ac.jobdu.com/problem.php?pid=1023
+ * @url:http://ac.jobdu.com/problem.php?pid=1023
  * 对象排序，实现C++使用sort，Java使用Arrays.sort。
  * 解题思路参考http://blog.csdn.net/u013027996/article/details/17219709
  */

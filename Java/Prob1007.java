@@ -5,7 +5,7 @@
  * @author:wangzq
  * @email:wangzhenqing1008@163.com
  * @date:2015年04月15日23:02:34
- * @url：http://ac.jobdu.com/problem.php?pid=1007
+ * @url:http://ac.jobdu.com/problem.php?pid=1007
  */
 
 import java.io.BufferedReader;

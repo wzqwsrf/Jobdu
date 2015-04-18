@@ -5,7 +5,7 @@
  * @author:wangzq
  * @email:wangzhenqing1008@163.com
  * @date:2015年04月16日14:35:22
- * @url：http://ac.jobdu.com/problem.php?pid=1014
+ * @url:http://ac.jobdu.com/problem.php?pid=1014
  */
 
 import java.util.Arrays;

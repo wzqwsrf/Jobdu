@@ -5,7 +5,7 @@
  * @author:wangzq
  * @email:wangzhenqing1008@163.com
  * @date:2014年07月16日18:47:19
- * @url：http://ac.jobdu.com/problem.php?pid=1012
+ * @url:http://ac.jobdu.com/problem.php?pid=1012
  * 并查集的典型应用。
  * 求出并查集的个数，再减去1就是需要修的道路数目
  * 解题思路参考http://blog.csdn.net/u013027996/article/details/17165557

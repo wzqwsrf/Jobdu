@@ -5,7 +5,7 @@
  * @author:wangzq
  * @email:wangzhenqing1008@163.com
  * @date:2014年07月17日11:17:18
- * @url：http://ac.jobdu.com/problem.php?pid=1040
+ * @url:http://ac.jobdu.com/problem.php?pid=1040
  * 素数筛除法
  * 解题思路参考http://blog.csdn.net/u013027996/article/details/35781195
  */

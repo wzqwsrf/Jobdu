@@ -5,7 +5,7 @@
  * @author:wangzq
  * @email:wangzhenqing1008@163.com
  * @date:2015年01月23日19:35:13
- * @url：http://ac.jobdu.com/problem.php?pid=1522
+ * @url:http://ac.jobdu.com/problem.php?pid=1522
  * 每次把最小数保存在minStack中，pop的时候判断是否和当前栈顶元素相等。
  * 解题思路参考http://blog.csdn.net/u013027996/article/details/43090751
  */

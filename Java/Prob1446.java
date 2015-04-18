@@ -5,7 +5,7 @@
  * @author:wangzq
  * @email:wangzhenqing1008@163.com
  * @date:2014年07月03日14:33:53
- * @url：http://ac.jobdu.com/problem.php?pid=1446
+ * @url:http://ac.jobdu.com/problem.php?pid=1446
  * 并查集变形，比一般并查集稍难，重点在理清思路
  * 解题思路参考http://blog.csdn.net/u013027996/article/details/17101513
  */

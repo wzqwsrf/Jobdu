@@ -5,7 +5,7 @@
  * @author:wangzq
  * @email:wangzhenqing1008@163.com
  * @date:2014年07月22日12:16:48
- * @url：http://ac.jobdu.com/problem.php?pid=1061
+ * @url:http://ac.jobdu.com/problem.php?pid=1061
  * 内置排序方法可以直接实现
  * 解题思路参考http://blog.csdn.net/u013027996/article/details/17219925
  */

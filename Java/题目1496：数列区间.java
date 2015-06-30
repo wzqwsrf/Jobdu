@@ -42,7 +42,7 @@ public class Main {
                     if (array[j] == 0) {
                         array[j] = i;
                     }
-                    //					获取下一次操作的坐标，并且将lr范围内的next都置为r;
+                    //获取下一次操作的坐标，并且将lr范围内的next都置为r;
                     int temp = next[j];
                     next[j] = next[r];
                     j = temp;

@@ -1,4 +1,13 @@
 
+// 题目1540：麦霸
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:56
+ * @url:http://ac.jobdu.com/problem.php?pid=1540
+ */
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -7,8 +16,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-	
-	public static void main(String[] args) throws IOException {
+
+public static void main(String[] args) throws IOException {
 		StreamTokenizer st = new StreamTokenizer(new BufferedReader(
 				new InputStreamReader(System.in)));
 		while (st.nextToken() != StreamTokenizer.TT_EOF) {
@@ -166,29 +175,32 @@ public class Main {
 				}
 			}
 		}
-	}
-	private static class Song{
-		private int startTime;
-		private int endTime;
-		private int len;
-		private int isMine;
-		public Song(int startTime, int endTime, int len, int isMine) {
-			super();
-			this.startTime = startTime;
-			this.endTime = endTime;
-			this.len = len;
-			this.isMine = isMine;
-		}
-	}
+	}    private static class Song {
+        private int startTime;
+
+        private int endTime;
+
+        private int len;
+
+        private int isMine;
+
+        public Song(int startTime, int endTime, int len, int isMine) {
+            super();
+            this.startTime = startTime;
+            this.endTime = endTime;
+            this.len = len;
+            this.isMine = isMine;
+        }
+    }
 }
 /**************************************************************
-	Problem: 1540
-	User: wangzhenqing
-	Language: Java
-	Result: Accepted
-	Time:2200 ms
-	Memory:49928 kb
-****************************************************************/
+ Problem: 1540
+ User: wangzhenqing
+ Language: Java
+ Result: Accepted
+ Time:2200 ms
+ Memory:49928 kb
+ ****************************************************************/
 
 
-                        
+

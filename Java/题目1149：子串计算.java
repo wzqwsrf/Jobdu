@@ -1,4 +1,13 @@
 
+// 题目1149：子串计算
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:53
+ * @url:http://ac.jobdu.com/problem.php?pid=1149
+ */
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -8,10 +17,10 @@ import java.util.Scanner;
 import java.util.Map.Entry;
 
 public class Main {
-	/*
-	 * 1149
-	 */
-	public static void main(String[] args) throws Exception {
+    /*
+     * 1149
+     */
+public static void main(String[] args) throws Exception {
 		Scanner scanner = new Scanner(System.in);
 		while (scanner.hasNext()) {
 			String a = scanner.next();
@@ -44,16 +53,15 @@ public class Main {
 				System.out.println(subStr+" "+numMap.get(subStr));
 			}
 		}
-	}
-}
+	}}
 /**************************************************************
-	Problem: 1149
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:160 ms
-	Memory:19328 kb
-****************************************************************/
+ Problem: 1149
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:160 ms
+ Memory:19328 kb
+ ****************************************************************/
 
 
-                        
+

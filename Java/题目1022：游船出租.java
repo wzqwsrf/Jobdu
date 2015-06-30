@@ -1,4 +1,13 @@
 
+// 题目1022：游船出租
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:52
+ * @url:http://ac.jobdu.com/problem.php?pid=1022
+ */
+
 import java.text.SimpleDateFormat;
 import java.util.HashMap;
 import java.util.Map;
@@ -6,10 +15,10 @@ import java.util.Scanner;
 import java.util.Map.Entry;
 
 public class Main {
-	/*
+    /*
      * 1022
      */
-	public static void main(String[] args) throws Exception {
+public static void main(String[] args) throws Exception {
 		Scanner scanner = new Scanner(System.in);
 		
 		SimpleDateFormat sdf = new SimpleDateFormat("mm:ss");
@@ -54,16 +63,15 @@ public class Main {
 		}
 		
 	}
-	
-}	
+}
 /**************************************************************
-	Problem: 1022
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:120 ms
-	Memory:17824 kb
-****************************************************************/
+ Problem: 1022
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:120 ms
+ Memory:17824 kb
+ ****************************************************************/
 
 
-                        
+

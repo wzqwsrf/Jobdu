@@ -1,13 +1,22 @@
 
+// 题目1109：连通图
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:53
+ * @url:http://ac.jobdu.com/problem.php?pid=1109
+ */
+
 import java.io.StreamTokenizer;
 import java.util.HashSet;
 import java.util.Set;
 
 public class Main {
-	/*
+    /*
      * 1109
      */
-    public static void main(String[] args) throws Exception {
+public static void main(String[] args) throws Exception {
         StreamTokenizer st = new StreamTokenizer(System.in);
         while (st.nextToken() != StreamTokenizer.TT_EOF) {
             int n = (int) st.nval;
@@ -42,9 +51,8 @@ public class Main {
 			}
         }
     }
- 
     private static void union(int f, int t, int[] parent) {
- 
+
         int a = findParent(f, parent);
         int b = findParent(t, parent);
         if (a == b)
@@ -55,7 +63,7 @@ public class Main {
             parent[b] = a;
         }
     }
- 
+
     private static int findParent(int f, int[] parent) {
         if (parent[f] == f) {
             return f;
@@ -64,13 +72,13 @@ public class Main {
     }
 }
 /**************************************************************
-	Problem: 1109
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:190 ms
-	Memory:19772 kb
-****************************************************************/
+ Problem: 1109
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:190 ms
+ Memory:19772 kb
+ ****************************************************************/
 
 
-                        
+

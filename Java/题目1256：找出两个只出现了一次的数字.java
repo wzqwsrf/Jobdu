@@ -1,4 +1,13 @@
 
+// 题目1256：找出两个只出现了一次的数字
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:54
+ * @url:http://ac.jobdu.com/problem.php?pid=1256
+ */
+
 import java.io.StreamTokenizer;
 
 public class Main {
@@ -16,7 +25,7 @@ public class Main {
                 array[i] = (int) st.nval;
                 result ^= array[i];
             }
- 
+
             int num = 0;
             while ((result & 1) == 0) {
                 result = result >> 1;
@@ -40,13 +49,13 @@ public class Main {
     }
 }
 /**************************************************************
-	Problem: 1256
-	User: wangzhenqing
-	Language: Java
-	Result: Accepted
-	Time:770 ms
-	Memory:33104 kb
-****************************************************************/
+ Problem: 1256
+ User: wangzhenqing
+ Language: Java
+ Result: Accepted
+ Time:770 ms
+ Memory:33104 kb
+ ****************************************************************/
 
 
-                        
+

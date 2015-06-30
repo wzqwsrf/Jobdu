@@ -1,13 +1,22 @@
 
+// 题目1334：占座位
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:54
+ * @url:http://ac.jobdu.com/problem.php?pid=1334
+ */
+
 import java.io.StreamTokenizer;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Main {
-	/*
+    /*
      * 1334
      */
-	public static void main(String[] args) throws Exception {
+public static void main(String[] args) throws Exception {
 		Map<Integer, Integer[]> allMap = new HashMap<Integer, Integer[]>();
         StreamTokenizer st = new StreamTokenizer(System.in);
         while (st.nextToken() != StreamTokenizer.TT_EOF) {
@@ -85,16 +94,15 @@ public class Main {
 			}
         }
     }
-
 }
 /**************************************************************
-	Problem: 1334
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:1100 ms
-	Memory:22080 kb
-****************************************************************/
+ Problem: 1334
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:1100 ms
+ Memory:22080 kb
+ ****************************************************************/
 
 
-                        
+

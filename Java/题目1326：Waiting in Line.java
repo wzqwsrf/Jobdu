@@ -1,4 +1,13 @@
 
+// 题目1326：Waiting in Line
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:54
+ * @url:http://ac.jobdu.com/problem.php?pid=1326
+ */
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.StreamTokenizer;
@@ -8,10 +17,10 @@ import java.util.List;
 import java.util.Map;
 
 public class Main {
-	/*
-	 * 1326
-	 */
-	public static void main(String[] args) throws Exception {
+    /*
+     * 1326
+     */
+public static void main(String[] args) throws Exception {
 		StreamTokenizer st = new StreamTokenizer(new BufferedReader(
 				new InputStreamReader(System.in)));
 		while (st.nextToken() != StreamTokenizer.TT_EOF) {
@@ -97,26 +106,29 @@ public class Main {
 			}
 		}
 	}
-	private static class Customer{
-		private int groupId;
-		private int taskTime;
-		private int allTime;
-		public Customer(int groupId,int taskTime, int allTime) {
-			super();
-			this.groupId = groupId;
-			this.taskTime = taskTime;
-			this.allTime = allTime;
-		}
-	}
+    private static class Customer {
+        private int groupId;
+
+        private int taskTime;
+
+        private int allTime;
+
+        public Customer(int groupId, int taskTime, int allTime) {
+            super();
+            this.groupId = groupId;
+            this.taskTime = taskTime;
+            this.allTime = allTime;
+        }
+    }
 }
 /**************************************************************
-	Problem: 1326
-	User: wangzhenqing
-	Language: Java
-	Result: Accepted
-	Time:510 ms
-	Memory:20404 kb
-****************************************************************/
+ Problem: 1326
+ User: wangzhenqing
+ Language: Java
+ Result: Accepted
+ Time:510 ms
+ Memory:20404 kb
+ ****************************************************************/
 
 
-                        
+

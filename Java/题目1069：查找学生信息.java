@@ -1,4 +1,13 @@
 
+// 题目1069：查找学生信息
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:52
+ * @url:http://ac.jobdu.com/problem.php?pid=1069
+ */
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -12,10 +21,10 @@ import java.util.Scanner;
  * @version 3.0.0
  */
 public class Main {
-	/*
-	 * 1069
-	 */
-	public static void main(String[] args) {
+    /*
+     * 1069
+     */
+public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		Map<String, String[]> stuMap = new HashMap<String, String[]>();
 		while (scanner.hasNext()) {
@@ -38,16 +47,15 @@ public class Main {
 				}
 			}
 		}
-	}
-}
+	}}
 /**************************************************************
-	Problem: 1069
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:870 ms
-	Memory:41008 kb
-****************************************************************/
+ Problem: 1069
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:870 ms
+ Memory:41008 kb
+ ****************************************************************/
 
 
-                        
+

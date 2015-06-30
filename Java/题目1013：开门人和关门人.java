@@ -1,14 +1,23 @@
 
+// 题目1013：开门人和关门人
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:52
+ * @url:http://ac.jobdu.com/problem.php?pid=1013
+ */
+
 import java.util.Scanner;
- 
+
 public class Main {
-	/*
+    /*
      * 1522
      */
-	public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNext()) {
-        	int N = scanner.nextInt();
+            int N = scanner.nextInt();
             for (int i = 0; i < N; i++) {
                 int M = scanner.nextInt();
                 String id = scanner.next();
@@ -20,27 +29,27 @@ public class Main {
                     String newId = scanner.next();
                     String newFirstStr = scanner.next();
                     String newSecStr = scanner.next();
-                    if (newFirstStr.compareTo(firstStr) < 0 ) {
+                    if (newFirstStr.compareTo(firstStr) < 0) {
                         firstId = newId;
                     }
                     if (newSecStr.compareTo(secStr) > 0) {
                         lastId = newId;
                     }
                 }
-                System.out.println(firstId+" "+lastId);
+                System.out.println(firstId + " " + lastId);
             }
         }
     }
 }
 
 /**************************************************************
-	Problem: 1013
-	User: wangzhenqing
-	Language: Java
-	Result: Accepted
-	Time:80 ms
-	Memory:15464 kb
-****************************************************************/
+ Problem: 1013
+ User: wangzhenqing
+ Language: Java
+ Result: Accepted
+ Time:80 ms
+ Memory:15464 kb
+ ****************************************************************/
 
 
-                        
+

@@ -1,4 +1,13 @@
 
+// 题目1164：旋转矩阵
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:53
+ * @url:http://ac.jobdu.com/problem.php?pid=1164
+ */
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -13,7 +22,7 @@ import java.util.Scanner;
  * @version 3.0.0
  */
 public class Main {
-	public static void main(String[] args)  {
+public static void main(String[] args)  {
 		Scanner scanner = new Scanner(System.in);
 		while (scanner.hasNext()) {
 			int N = scanner.nextInt();
@@ -57,67 +66,66 @@ public class Main {
 			}
 		}
 	}
+    private static int revolve0(int[][] arrayA, int[][] arrayB, int N) {
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                if (arrayB[i][j] == arrayA[i][j]) {
+                    continue;
+                } else {
+                    return -1;
+                }
+            }
+        }
+        return 0;
+    }
 
-	private static int revolve0(int[][] arrayA, int[][] arrayB, int N) {
-		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < N; j++) {
-				if (arrayB[i][j] == arrayA[i][j]) {
-					continue;
-				}else {
-					return -1;
-				}
-			}
-		}
-		return 0;
-	}
-	
-	private static int revolve90(int[][] arrayA, int[][] arrayB, int N) {
-		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < N; j++) {
-				if (arrayB[i][j] == arrayA[N-j-1][i]) {
-					continue;
-				}else {
-					return -1;
-				}
-			}
-		}
-		return 90;
-	}
-	
-	private static int revolve180(int[][] arrayA, int[][] arrayB, int N) {
-		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < N; j++) {
-				if (arrayB[i][j] == arrayA[N-i-1][N-j-1]) {
-					continue;
-				}else {
-					return -1;
-				}
-			}
-		}
-		return 180;
-	}
-	
-	private static int revolve270(int[][] arrayA, int[][] arrayB, int N) {
-		for (int i = 0; i < N; i++) {
-			for (int j = 0; j < N; j++) {
-				if (arrayB[i][j] == arrayA[j][N-i-1]) {
-					continue;
-				}else {
-					return -1;
-				}
-			}
-		}
-		return 270;
-	}
+    private static int revolve90(int[][] arrayA, int[][] arrayB, int N) {
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                if (arrayB[i][j] == arrayA[N - j - 1][i]) {
+                    continue;
+                } else {
+                    return -1;
+                }
+            }
+        }
+        return 90;
+    }
+
+    private static int revolve180(int[][] arrayA, int[][] arrayB, int N) {
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                if (arrayB[i][j] == arrayA[N - i - 1][N - j - 1]) {
+                    continue;
+                } else {
+                    return -1;
+                }
+            }
+        }
+        return 180;
+    }
+
+    private static int revolve270(int[][] arrayA, int[][] arrayB, int N) {
+        for (int i = 0; i < N; i++) {
+            for (int j = 0; j < N; j++) {
+                if (arrayB[i][j] == arrayA[j][N - i - 1]) {
+                    continue;
+                } else {
+                    return -1;
+                }
+            }
+        }
+        return 270;
+    }
 }
 /**************************************************************
-	Problem: 1164
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:110 ms
-	Memory:18660 kb
-****************************************************************/
+ Problem: 1164
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:110 ms
+ Memory:18660 kb
+ ****************************************************************/
 
 
-                        
+

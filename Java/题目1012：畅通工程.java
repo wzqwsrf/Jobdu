@@ -1,16 +1,26 @@
 
+// 题目1012：畅通工程
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:52
+ * @url:http://ac.jobdu.com/problem.php?pid=1012
+ */
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.StreamTokenizer;
 import java.util.HashSet;
 import java.util.Set;
- 
+
 public class Main {
-	/*
+    /*
      * 1012
      */
-	private static int parent[];
-    public static void main(String[] args) throws Exception{
+    private static int parent[];
+
+public static void main(String[] args) throws Exception{
         StreamTokenizer st = new StreamTokenizer(new BufferedReader(
 				new InputStreamReader(System.in)));
 		while (st.nextToken() != StreamTokenizer.TT_EOF) {
@@ -41,17 +51,18 @@ public class Main {
 			}
 			System.out.println(numSet.size() - 1);
 		}
-	}
-    private static void union(int f, int t) {
+	}    private static void union(int f, int t) {
         int a = findParent(f);
         int b = findParent(t);
-        if (a == b) return; 
-        if (a > b) {   
-            parent[a] = b;   
-         } else {
-            parent[b] = a; 
-         }
+        if (a == b)
+            return;
+        if (a > b) {
+            parent[a] = b;
+        } else {
+            parent[b] = a;
+        }
     }
+
     private static int findParent(int f) {
         while (parent[f] != f) {
             f = parent[f];
@@ -61,13 +72,13 @@ public class Main {
 }
 
 /**************************************************************
-	Problem: 1012
-	User: wangzhenqing
-	Language: Java
-	Result: Accepted
-	Time:180 ms
-	Memory:23560 kb
-****************************************************************/
+ Problem: 1012
+ User: wangzhenqing
+ Language: Java
+ Result: Accepted
+ Time:180 ms
+ Memory:23560 kb
+ ****************************************************************/
 
 
-                        
+

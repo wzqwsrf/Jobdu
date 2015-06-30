@@ -1,4 +1,14 @@
 
+
+// 题目1110：小白鼠排队
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:53
+ * @url:http://ac.jobdu.com/problem.php?pid=1110
+ */
+
 import java.io.StreamTokenizer;
 import java.util.Arrays;
 /**
@@ -81,3 +91,4 @@ class Mouse implements Comparable<Mouse>{
 
 
                         
+

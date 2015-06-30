@@ -1,13 +1,22 @@
 
+// 题目1019：简单计算器
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:52
+ * @url:http://ac.jobdu.com/problem.php?pid=1019
+ */
+
 import java.util.Scanner;
 import java.util.Stack;
 import java.util.regex.Pattern;
 
 public class Main {
-	/*
-	 * 1019
-	 */
-	public static void main(String[] args) {
+    /*
+     * 1019
+     */
+public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		while (scanner.hasNextLine()) {
 			Stack<Double> stack1 = new Stack<Double>();
@@ -65,17 +74,16 @@ public class Main {
 			}
 			System.out.printf("%.2f\n" ,res);
 		}
-	}
-}	
+	}}
 
 /**************************************************************
-	Problem: 1019
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:90 ms
-	Memory:15664 kb
-****************************************************************/
+ Problem: 1019
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:90 ms
+ Memory:15664 kb
+ ****************************************************************/
 
 
-                        
+

@@ -1,12 +1,21 @@
 
+// 题目1366：栈的压入、弹出序列
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:54
+ * @url:http://ac.jobdu.com/problem.php?pid=1366
+ */
+
 import java.io.StreamTokenizer;
 import java.util.Stack;
 
 public class Main {
-	 /*
+    /*
      * 1366
      */
-    public static void main(String[] args) throws Exception{
+public static void main(String[] args) throws Exception{
         StreamTokenizer st = new StreamTokenizer(System.in);
         while (st.nextToken() != StreamTokenizer.TT_EOF) {
         	int n = (int) st.nval;
@@ -54,16 +63,15 @@ public class Main {
 			}
         }
     }
-	   
 }
 /**************************************************************
-	Problem: 1366
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:760 ms
-	Memory:39068 kb
-****************************************************************/
+ Problem: 1366
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:760 ms
+ Memory:39068 kb
+ ****************************************************************/
 
 
-                        
+

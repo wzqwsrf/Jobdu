@@ -1,13 +1,22 @@
 
+// 题目1526：朋友圈
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:55
+ * @url:http://ac.jobdu.com/problem.php?pid=1526
+ */
+
 import java.io.StreamTokenizer;
 import java.util.HashSet;
 import java.util.Set;
- 
+
 public class Main {
-     /*
+    /*
      * 1526
      */
-    public static void main(String[] args) throws Exception{
+public static void main(String[] args) throws Exception{
         StreamTokenizer st = new StreamTokenizer(System.in);
         while (st.nextToken() != StreamTokenizer.TT_EOF) {
             int n = (int) st.nval;
@@ -42,35 +51,35 @@ public class Main {
             }
         }
     }
-  
-    private static void union(int f, int t, int[] parent ) {
-          
-        int a = findParent(f , parent);
-        int b = findParent(t , parent);
-        if (a == b) return; 
-        if (a > b) {   
-            parent[a] = b;   
-         } else {
-            parent[b] = a; 
-         }
+    private static void union(int f, int t, int[] parent) {
+
+        int a = findParent(f, parent);
+        int b = findParent(t, parent);
+        if (a == b)
+            return;
+        if (a > b) {
+            parent[a] = b;
+        } else {
+            parent[b] = a;
+        }
     }
-  
+
     private static int findParent(int f, int[] parent) {
         if (parent[f] == f) {
             return f;
         }
-        return findParent(parent[f],parent );
+        return findParent(parent[f], parent);
     }
-}   
+}
 
 /**************************************************************
-	Problem: 1526
-	User: wangzhenqing
-	Language: Java
-	Result: Accepted
-	Time:970 ms
-	Memory:41748 kb
-****************************************************************/
+ Problem: 1526
+ User: wangzhenqing
+ Language: Java
+ Result: Accepted
+ Time:970 ms
+ Memory:41748 kb
+ ****************************************************************/
 
 
-                        
+

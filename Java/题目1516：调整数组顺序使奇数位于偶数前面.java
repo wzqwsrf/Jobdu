@@ -1,4 +1,13 @@
 
+// 题目1516：调整数组顺序使奇数位于偶数前面
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:55
+ * @url:http://ac.jobdu.com/problem.php?pid=1516
+ */
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.StreamTokenizer;
@@ -6,10 +15,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Main {
-	/*
+    /*
      * 1516
      */
-    public static void main(String[] args) throws Exception{
+public static void main(String[] args) throws Exception{
     	StreamTokenizer st = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
 		while (st.nextToken() != StreamTokenizer.TT_EOF) {
 			int n = (int) st.nval;
@@ -37,17 +46,16 @@ public class Main {
             System.out.println(sb.toString().trim());
         }
     }
-	
 }
 
 /**************************************************************
-	Problem: 1516
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:940 ms
-	Memory:60092 kb
-****************************************************************/
+ Problem: 1516
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:940 ms
+ Memory:60092 kb
+ ****************************************************************/
 
 
-                        
+

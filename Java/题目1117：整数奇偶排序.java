@@ -1,16 +1,25 @@
 
+// 题目1117：整数奇偶排序
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:53
+ * @url:http://ac.jobdu.com/problem.php?pid=1117
+ */
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.StreamTokenizer;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
- 
+
 public class Main {
-	/*
-	 * 1061
-	 */
-	public static void main(String[] args) throws Exception {
+    /*
+     * 1061
+     */
+public static void main(String[] args) throws Exception {
 		StreamTokenizer st = new StreamTokenizer(new BufferedReader(
 				new InputStreamReader(System.in)));
 		while (st.nextToken() != StreamTokenizer.TT_EOF) {
@@ -41,17 +50,16 @@ public class Main {
 			}
 			System.out.println(sb.toString().trim());
 		}
-	}
-}
+	}}
 
 /**************************************************************
-	Problem: 1117
-	User: wangzhenqing
-	Language: Java
-	Result: Accepted
-	Time:1350 ms
-	Memory:82300 kb
-****************************************************************/
+ Problem: 1117
+ User: wangzhenqing
+ Language: Java
+ Result: Accepted
+ Time:1350 ms
+ Memory:82300 kb
+ ****************************************************************/
 
 
-                        
+

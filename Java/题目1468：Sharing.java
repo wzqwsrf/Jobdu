@@ -1,13 +1,22 @@
 
+// 题目1468：Sharing
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:55
+ * @url:http://ac.jobdu.com/problem.php?pid=1468
+ */
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
 
 public class Main {
-	/*
-	 * 1468
-	 */
-	public static void main(String[] args) {
+    /*
+     * 1468
+     */
+public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		String array[] = new String[1000000];
 		Map<String, String> storeMap = new HashMap<String, String>();
@@ -77,16 +86,15 @@ public class Main {
 				System.out.println(anext);
 			}
 		}
-	}
-}
+	}}
 /**************************************************************
-	Problem: 1468
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:2990 ms
-	Memory:235160 kb
-****************************************************************/
+ Problem: 1468
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:2990 ms
+ Memory:235160 kb
+ ****************************************************************/
 
 
-                        
+

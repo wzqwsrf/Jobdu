@@ -1,12 +1,21 @@
 
+// 题目1337：寻找最长合法括号序列
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:54
+ * @url:http://ac.jobdu.com/problem.php?pid=1337
+ */
+
 import java.util.Scanner;
 import java.util.Stack;
- 
+
 public class Main {
-	/*
+    /*
      * 1337
      */
-    public static void main(String[] args) {
+public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNext()) {
             int n = scanner.nextInt();
@@ -41,17 +50,16 @@ public class Main {
 			}
             System.out.println(maxLen == 0 ? "0 1" : maxLen+" "+count);
         }
-    }
-}
+    }}
 
 /**************************************************************
-	Problem: 1337
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:2130 ms
-	Memory:80436 kb
-****************************************************************/
+ Problem: 1337
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:2130 ms
+ Memory:80436 kb
+ ****************************************************************/
 
 
-                        
+

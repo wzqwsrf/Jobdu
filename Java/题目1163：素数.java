@@ -1,9 +1,16 @@
 
+// 题目1163：素数
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:53
+ * @url:http://ac.jobdu.com/problem.php?pid=1163
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-
-
 
 /** 
  * @ClassName: Main1046 
@@ -14,8 +21,8 @@ import java.util.Scanner;
  * @version 3.0.0 
  */
 public class Main {
-	
-	public static void main(String[] args) {
+
+public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		while (scanner.hasNext()) {
 			int n = scanner.nextInt();
@@ -47,17 +54,15 @@ public class Main {
 			
 			
 		}
-	}
-	
-}
+	}}
 /**************************************************************
-	Problem: 1163
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:140 ms
-	Memory:19604 kb
-****************************************************************/
+ Problem: 1163
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:140 ms
+ Memory:19604 kb
+ ****************************************************************/
 
 
-                        
+

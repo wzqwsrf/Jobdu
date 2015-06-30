@@ -1,8 +1,18 @@
 
+// 题目1167：数组排序
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:53
+ * @url:http://ac.jobdu.com/problem.php?pid=1167
+ */
+
 import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
+
 /**
  * @ClassName: Main1046
  * @Description: TODO
@@ -12,10 +22,10 @@ import java.util.Scanner;
  * @version 3.0.0
  */
 public class Main {
-	/*
-	 * 1167
-	 */
-	public static void main(String[] args) {
+    /*
+     * 1167
+     */
+public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		while (scanner.hasNext()) {
 			int n = scanner.nextInt();
@@ -41,16 +51,15 @@ public class Main {
 			System.out.print(nuMap.get(array[n-1]));
 			System.out.println();
 		}
-	}
-}
+	}}
 /**************************************************************
-	Problem: 1167
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:740 ms
-	Memory:37612 kb
-****************************************************************/
+ Problem: 1167
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:740 ms
+ Memory:37612 kb
+ ****************************************************************/
 
 
-                        
+

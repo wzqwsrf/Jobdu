@@ -1,4 +1,13 @@
 
+// 题目1026：又一版 A+B
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:52
+ * @url:http://ac.jobdu.com/problem.php?pid=1026
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -12,10 +21,10 @@ import java.util.Scanner;
  * @version 3.0.0
  */
 public class Main {
-	/*
-	 * 1026
-	 */
-	public static void main(String[] args) {
+    /*
+     * 1026
+     */
+public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		while (scanner.hasNext()) {
 			int m = scanner.nextInt();
@@ -43,17 +52,16 @@ public class Main {
 			
 		}
 	}
-	
 }
 
 /**************************************************************
-	Problem: 1026
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:80 ms
-	Memory:15496 kb
-****************************************************************/
+ Problem: 1026
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:80 ms
+ Memory:15496 kb
+ ****************************************************************/
 
 
-                        
+

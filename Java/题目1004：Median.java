@@ -1,4 +1,13 @@
 
+// 题目1004：Median
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:51
+ * @url:http://ac.jobdu.com/problem.php?pid=1004
+ */
+
 import java.util.Arrays;
 import java.util.Scanner;
 
@@ -8,7 +17,6 @@ import java.util.Scanner;
  * @Description:
  */
 public class Main {
-
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
@@ -39,11 +47,10 @@ public class Main {
             return findKth(A, 0, m - 1, B, 0, n - 1, total / 2);
         }
 
-
     }
 
     private static long findKth(long[] A, int s1, int e1, long[] B, int s2,
-                                int e2, int k) {
+            int e2, int k) {
         int m = e1 - s1 + 1;
         int n = e2 - s2 + 1;
         if (m > n) {
@@ -70,13 +77,13 @@ public class Main {
 }
 
 /**************************************************************
-	Problem: 1004
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:120 ms
-	Memory:18552 kb
-****************************************************************/
+ Problem: 1004
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:120 ms
+ Memory:18552 kb
+ ****************************************************************/
 
 
-                        
+

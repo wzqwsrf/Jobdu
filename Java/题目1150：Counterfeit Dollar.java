@@ -1,16 +1,25 @@
 
+// 题目1150：Counterfeit Dollar
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:53
+ * @url:http://ac.jobdu.com/problem.php?pid=1150
+ */
+
 import java.util.Arrays;
 import java.util.Scanner;
- 
+
 public class Main {
-	 /*
+    /*
      * 1150
      */
-    public static void main(String[] args) throws  Exception {
+    public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNext()) {
             int n = scanner.nextInt();
-//          ABCDEFGHIJKL
+            //          ABCDEFGHIJKL
             for (int m = 0; m < n; m++) {
                 int arrayA[] = new int[12];
                 int arrayB[] = new int[12];
@@ -24,30 +33,30 @@ public class Main {
                     int len2 = right.length();
                     if (result.equals("even")) {
                         for (int j = 0; j < len1; j++) {
-                        	arrayB[left.charAt(j)- 'A'] = 0;
+                            arrayB[left.charAt(j) - 'A'] = 0;
                         }
                         for (int j = 0; j < len2; j++) {
-                        	arrayB[right.charAt(j)-'A'] = 0;
+                            arrayB[right.charAt(j) - 'A'] = 0;
                         }
-                    }else if (result.equals("up")){
-                    	num++;
+                    } else if (result.equals("up")) {
+                        num++;
                         for (int j = 0; j < len1; j++) {
-                        	arrayA[left.charAt(j)- 'A']--;
+                            arrayA[left.charAt(j) - 'A']--;
                         }
                         for (int j = 0; j < right.length(); j++) {
-                        	arrayA[right.charAt(j)-'A']++;
+                            arrayA[right.charAt(j) - 'A']++;
                         }
-                    }else if (result.equals("down")){
-                    	num++;
+                    } else if (result.equals("down")) {
+                        num++;
                         for (int j = 0; j < left.length(); j++) {
-                        	arrayA[left.charAt(j)- 'A']++;
+                            arrayA[left.charAt(j) - 'A']++;
                         }
                         for (int j = 0; j < right.length(); j++) {
-                        	arrayA[right.charAt(j)-'A']--;
+                            arrayA[right.charAt(j) - 'A']--;
                         }
                     }
                 }
-                 
+
                 int maxId = 0;
                 int k = 0;
                 while (k < 12) {
@@ -56,26 +65,28 @@ public class Main {
                     }
                     k++;
                 }
-                char c = (char) (maxId+'A');
+                char c = (char) (maxId + 'A');
                 if (arrayA[maxId] < 0) {
-                    System.out.println( c  +" is the counterfeit coin and it is heavy.");
-                }else {
-                    System.out.println( c +" is the counterfeit coin and it is light.");
+                    System.out.println(c
+                            + " is the counterfeit coin and it is heavy.");
+                } else {
+                    System.out.println(c
+                            + " is the counterfeit coin and it is light.");
                 }
             }
-             
+
         }
     }
 }
 
 /**************************************************************
-	Problem: 1150
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:80 ms
-	Memory:15488 kb
-****************************************************************/
+ Problem: 1150
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:80 ms
+ Memory:15488 kb
+ ****************************************************************/
 
 
-                        
+

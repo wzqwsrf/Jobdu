@@ -1,14 +1,23 @@
 
+// 题目1512：用两个栈实现队列
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:55
+ * @url:http://ac.jobdu.com/problem.php?pid=1512
+ */
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.StreamTokenizer;
 import java.util.Stack;
- 
+
 public class Main {
-	/*
+    /*
      * 1522
      */
-	public static void main(String[] args) throws Exception {
+public static void main(String[] args) throws Exception {
         StreamTokenizer st = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
         while (st.nextToken() != StreamTokenizer.TT_EOF) {
             int n = (int) st.nval;
@@ -35,16 +44,15 @@ public class Main {
                 }
             }
         }
-    }
-}
+    }}
 /**************************************************************
-	Problem: 1512
-	User: wangzhenqing
-	Language: Java
-	Result: Accepted
-	Time:1370 ms
-	Memory:42204 kb
-****************************************************************/
+ Problem: 1512
+ User: wangzhenqing
+ Language: Java
+ Result: Accepted
+ Time:1370 ms
+ Memory:42204 kb
+ ****************************************************************/
 
 
-                        
+

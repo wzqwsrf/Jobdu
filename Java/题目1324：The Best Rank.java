@@ -1,4 +1,13 @@
 
+// 题目1324：The Best Rank
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:54
+ * @url:http://ac.jobdu.com/problem.php?pid=1324
+ */
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.StreamTokenizer;
@@ -6,12 +15,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
- 
+
 public class Main {
-	/*
-	 * 1324
-	 */
-	public static void main(String[] args) throws Exception{
+    /*
+     * 1324
+     */
+public static void main(String[] args) throws Exception{
         StreamTokenizer st = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
         while (st.nextToken() != StreamTokenizer.TT_EOF) {
         	int n = (int) st.nval;
@@ -74,16 +83,15 @@ public class Main {
 				}
 			}
         }
-    }
-}
+    }}
 /**************************************************************
-	Problem: 1324
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:610 ms
-	Memory:24956 kb
-****************************************************************/
+ Problem: 1324
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:610 ms
+ Memory:24956 kb
+ ****************************************************************/
 
 
-                        
+

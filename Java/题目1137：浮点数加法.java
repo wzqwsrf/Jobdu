@@ -1,16 +1,27 @@
 
+// 题目1137：浮点数加法
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:53
+ * @url:http://ac.jobdu.com/problem.php?pid=1137
+ */
+
 import java.util.Scanner;
- 
+
 public class Main {
     static String t1;
+
     static String x, y;
+
     static int f;
- 
+
     public static void main(String[] args) {
         Scanner cin = new Scanner(System.in);
         String s1, s2;
         int n;
- 
+
         while (cin.hasNext()) {
             n = cin.nextInt();
             for (int m = 0; m < n; m++) {
@@ -26,7 +37,7 @@ public class Main {
                     a1 = s1.substring(0, s1.indexOf('.'));
                     b1 = s1.substring(s1.indexOf('.') + 1, s1.length());
                 }
- 
+
                 String a2, b2;
                 s2 = cin.next();
                 if (!s2.contains(".")) {
@@ -36,7 +47,7 @@ public class Main {
                     a2 = s2.substring(0, s2.indexOf('.'));
                     b2 = s2.substring(s2.indexOf('.') + 1, s2.length());
                 }
- 
+
                 int lb1 = b1.length();
                 int lb2 = b2.length();
                 t1 = "";
@@ -81,7 +92,7 @@ public class Main {
             }
         }
     }
- 
+
     static int add(String ss1, String ss2, int len1, int len2, int flag) {
         char ss[] = new char[len1];
         int t = 0, i;
@@ -94,7 +105,7 @@ public class Main {
                 f = 0;
             ss[len1 - i] = (char) (t + '0');
         }
- 
+
         while (len1 - i >= 0) {
             t = (ss1.charAt(len1 - i) - '0') + f;
             if (t >= 10) {
@@ -105,7 +116,7 @@ public class Main {
             ss[len1 - i] = (char) (t + '0');
             ++i;
         }
- 
+
         if (flag == -1)
             y = String.valueOf(ss);
         else if (flag == 1) {
@@ -115,13 +126,13 @@ public class Main {
     }
 }
 /**************************************************************
-	Problem: 1137
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:2270 ms
-	Memory:55000 kb
-****************************************************************/
+ Problem: 1137
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:2270 ms
+ Memory:55000 kb
+ ****************************************************************/
 
 
-                        
+

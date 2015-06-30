@@ -1,4 +1,13 @@
 
+// 题目1165：字符串匹配
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:53
+ * @url:http://ac.jobdu.com/problem.php?pid=1165
+ */
+
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Scanner;
@@ -11,8 +20,8 @@ import java.util.Scanner;
  * 
  * @version 3.0.0 
  */
-public class Main{
-	public static void main(String[] args) {
+public class Main {
+public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		while (scanner.hasNext()) {
 			int n = scanner.nextInt();
@@ -38,17 +47,16 @@ public class Main{
 				}
 			}
 		}
-	}
-}
+	}}
 
 /**************************************************************
-	Problem: 1165
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:80 ms
-	Memory:15448 kb
-****************************************************************/
+ Problem: 1165
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:80 ms
+ Memory:15448 kb
+ ****************************************************************/
 
 
-                        
+

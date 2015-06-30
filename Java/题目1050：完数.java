@@ -1,4 +1,13 @@
 
+// 题目1050：完数
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:52
+ * @url:http://ac.jobdu.com/problem.php?pid=1050
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -12,9 +21,8 @@ import java.util.Scanner;
  * @version 3.0.0 
  */
 public class Main {
-	
-	
-	public static void main(String[] args) {
+
+public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		while (scanner.hasNext()) {
 			int n = scanner.nextInt();
@@ -37,17 +45,15 @@ public class Main {
 			System.out.println(result.trim());
 		}
 		
-	}
-	
-}
+	}}
 /**************************************************************
-	Problem: 1050
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:330 ms
-	Memory:17156 kb
-****************************************************************/
+ Problem: 1050
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:330 ms
+ Memory:17156 kb
+ ****************************************************************/
 
 
-                        
+

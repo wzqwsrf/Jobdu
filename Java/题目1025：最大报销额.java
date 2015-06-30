@@ -1,14 +1,23 @@
 
+// 题目1025：最大报销额
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:52
+ * @url:http://ac.jobdu.com/problem.php?pid=1025
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Pattern;
- 
+
 public class Main {
     /*
      * 1025
      */
-    public static void main(String[] args) throws Exception {
+public static void main(String[] args) throws Exception {
         Scanner scanner = new Scanner(System.in);
         while (scanner.hasNext()) {
             double q = scanner.nextDouble();
@@ -59,16 +68,15 @@ public class Main {
             double res = (double)(dp[hunq]/100.00);
             System.out.printf("%.2f\n" , res);
         }
-    }
-}
+    }}
 /**************************************************************
-	Problem: 1025
-	User: wangzhenqing
-	Language: Java
-	Result: Accepted
-	Time:420 ms
-	Memory:49096 kb
-****************************************************************/
+ Problem: 1025
+ User: wangzhenqing
+ Language: Java
+ Result: Accepted
+ Time:420 ms
+ Memory:49096 kb
+ ****************************************************************/
 
 
-                        
+

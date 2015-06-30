@@ -1,4 +1,13 @@
 
+// 题目1090：路径打印
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:53
+ * @url:http://ac.jobdu.com/problem.php?pid=1090
+ */
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -6,10 +15,10 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 
 public class Main {
-	/*
-	 * 1090
-	 */
-	public static void main(String[] args) throws Exception {
+    /*
+     * 1090
+     */
+public static void main(String[] args) throws Exception {
 		Scanner scanner = new Scanner(System.in);
 		while (scanner.hasNext()) {
 			int n = scanner.nextInt();
@@ -56,17 +65,16 @@ public class Main {
 			}
 			System.out.println(sb);
 		}
-	}
-}
+	}}
 
 /**************************************************************
-	Problem: 1090
-	User: wangzhenqing
-	Language: Java
-	Result: Accepted
-	Time:100 ms
-	Memory:15804 kb
-****************************************************************/
+ Problem: 1090
+ User: wangzhenqing
+ Language: Java
+ Result: Accepted
+ Time:100 ms
+ Memory:15804 kb
+ ****************************************************************/
 
 
-                        
+

@@ -1,7 +1,17 @@
 
+// 题目1099：后缀子串排序
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:53
+ * @url:http://ac.jobdu.com/problem.php?pid=1099
+ */
+
 import java.util.Scanner;
 import java.util.Set;
 import java.util.TreeSet;
+
 /**
  * @ClassName: Main1046
  * @Description: TODO
@@ -11,10 +21,10 @@ import java.util.TreeSet;
  * @version 3.0.0
  */
 public class Main {
-	/*
-	 * 1099
-	 */
-	public static void main(String[] args) {
+    /*
+     * 1099
+     */
+public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		while (scanner.hasNext()) {
 			String ab = scanner.next();
@@ -27,16 +37,15 @@ public class Main {
 				System.out.println(result);
 			}
 		}
-	}
-}
+	}}
 /**************************************************************
-	Problem: 1099
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:90 ms
-	Memory:15524 kb
-****************************************************************/
+ Problem: 1099
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:90 ms
+ Memory:15524 kb
+ ****************************************************************/
 
 
-                        
+

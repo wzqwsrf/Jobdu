@@ -1,13 +1,22 @@
 
+// 题目1485：W's Cipher
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:55
+ * @url:http://ac.jobdu.com/problem.php?pid=1485
+ */
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
 public class Main {
-	/*
-	 * 1485
-	 */
-	public static void main(String[] args) throws Exception {
+    /*
+     * 1485
+     */
+public static void main(String[] args) throws Exception {
 		Scanner scanner = new Scanner(System.in);
 		while (scanner.hasNext()) {
 			int k1 = scanner.nextInt();
@@ -59,16 +68,15 @@ public class Main {
 			}
 			System.out.println(sb);
 		}
-	}
-}
+	}}
 /**************************************************************
-	Problem: 1485
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:100 ms
-	Memory:17660 kb
-****************************************************************/
+ Problem: 1485
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:100 ms
+ Memory:17660 kb
+ ****************************************************************/
 
 
-                        
+

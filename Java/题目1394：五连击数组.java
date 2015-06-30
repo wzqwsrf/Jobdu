@@ -1,16 +1,25 @@
 
+// 题目1394：五连击数组
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:54
+ * @url:http://ac.jobdu.com/problem.php?pid=1394
+ */
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.StreamTokenizer;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
- 
+
 public class Main {
     /*
      * 1394
      */
-    public static void main(String[] args) throws Exception {
+public static void main(String[] args) throws Exception {
         StreamTokenizer st = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
         while (st.nextToken() != StreamTokenizer.TT_EOF) {
             int n = (int) st.nval;
@@ -43,16 +52,15 @@ public class Main {
             }
             System.out.println(min);
         }
-    }
-}
+    }}
 /**************************************************************
-	Problem: 1394
-	User: wangzhenqing
-	Language: Java
-	Result: Accepted
-	Time:80 ms
-	Memory:16224 kb
-****************************************************************/
+ Problem: 1394
+ User: wangzhenqing
+ Language: Java
+ Result: Accepted
+ Time:80 ms
+ Memory:16224 kb
+ ****************************************************************/
 
 
-                        
+

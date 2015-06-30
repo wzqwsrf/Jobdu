@@ -1,4 +1,13 @@
 
+// 题目1007：奥运排序问题
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:51
+ * @url:http://ac.jobdu.com/problem.php?pid=1007
+ */
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.StreamTokenizer;
@@ -6,12 +15,12 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
- 
+
 public class Main {
-	/*
-	 * 1007
-	 */
-	public static void main(String[] args) throws Exception{
+    /*
+     * 1007
+     */
+public static void main(String[] args) throws Exception{
         StreamTokenizer st = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
         while (st.nextToken() != StreamTokenizer.TT_EOF) {
         	int n = (int) st.nval;
@@ -78,16 +87,15 @@ public class Main {
 			}
         	System.out.println();
         }
-    }
-}
+    }}
 /**************************************************************
-	Problem: 1007
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:70 ms
-	Memory:14616 kb
-****************************************************************/
+ Problem: 1007
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:70 ms
+ Memory:14616 kb
+ ****************************************************************/
 
 
-                        
+

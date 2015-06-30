@@ -1,4 +1,13 @@
 
+// 题目1027：欧拉回路
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:52
+ * @url:http://ac.jobdu.com/problem.php?pid=1027
+ */
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.StreamTokenizer;
@@ -9,7 +18,7 @@ public class Main {
     /*
      * 1027
      */
-    public static void main(String[] args) throws Exception {
+public static void main(String[] args) throws Exception {
     	StreamTokenizer st = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
         while (st.nextToken() != StreamTokenizer.TT_EOF) {
         	int n = (int) st.nval;
@@ -58,34 +67,34 @@ public class Main {
 			}
         }
     }
-    
-    private static void union(int f, int t, int[] parent ) {
-        
-        int a = findParent(f , parent);
-        int b = findParent(t , parent);
-        if (a == b) return; 
-        if (a > b) {   
-            parent[a] = b;   
-         } else {
-            parent[b] = a; 
-         }
+    private static void union(int f, int t, int[] parent) {
+
+        int a = findParent(f, parent);
+        int b = findParent(t, parent);
+        if (a == b)
+            return;
+        if (a > b) {
+            parent[a] = b;
+        } else {
+            parent[b] = a;
+        }
     }
-  
+
     private static int findParent(int f, int[] parent) {
         if (parent[f] == f) {
             return f;
         }
-        return findParent(parent[f],parent );
+        return findParent(parent[f], parent);
     }
 }
 /**************************************************************
-	Problem: 1027
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:260 ms
-	Memory:24644 kb
-****************************************************************/
+ Problem: 1027
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:260 ms
+ Memory:24644 kb
+ ****************************************************************/
 
 
-                        
+

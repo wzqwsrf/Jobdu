@@ -1,13 +1,22 @@
 
+// 题目1101：计算表达式
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:53
+ * @url:http://ac.jobdu.com/problem.php?pid=1101
+ */
+
 import java.util.Scanner;
 import java.util.Stack;
 import java.util.regex.Pattern;
 
 public class Main {
-	/*
-	 * 1019
-	 */
-	public static void main(String[] args) {
+    /*
+     * 1019
+     */
+public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
 		while (scanner.hasNext()) {
 			Stack<Integer> stack1 = new Stack<Integer>();
@@ -64,17 +73,16 @@ public class Main {
 			}
 			System.out.println(res);
 		}
-	}	
-}
+	}}
 
 /**************************************************************
-	Problem: 1101
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:80 ms
-	Memory:15528 kb
-****************************************************************/
+ Problem: 1101
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:80 ms
+ Memory:15528 kb
+ ****************************************************************/
 
 
-                        
+

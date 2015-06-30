@@ -1,9 +1,18 @@
 
+// 题目1486：False coin
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:55
+ * @url:http://ac.jobdu.com/problem.php?pid=1486
+ */
+
 import java.util.Arrays;
 import java.util.Scanner;
- 
+
 public class Main {
-	/*
+    /*
      * 1486
      */
     public static void main(String[] args) throws Exception {
@@ -28,32 +37,32 @@ public class Main {
                 String symbol = scanner.next();
                 if (symbol.equals("=")) {
                     for (int i = 0; i < first; i++) {
-                    	arrayB[tempArrayA[i]] = 0;
-                    	arrayB[tempArrayB[i]] = 0;
+                        arrayB[tempArrayA[i]] = 0;
+                        arrayB[tempArrayB[i]] = 0;
                     }
-                }else if (symbol.equals(">")) {
-                	num++;
+                } else if (symbol.equals(">")) {
+                    num++;
                     for (int i = 0; i < first; i++) {
-                    	arrayA[tempArrayA[i]]++;
-                    	arrayA[tempArrayB[i]]--;
+                        arrayA[tempArrayA[i]]++;
+                        arrayA[tempArrayB[i]]--;
                     }
-                }else if (symbol.equals("<")) {
-                	num++;
+                } else if (symbol.equals("<")) {
+                    num++;
                     for (int i = 0; i < first; i++) {
-                    	arrayA[tempArrayA[i]]--;
-                    	arrayA[tempArrayB[i]]++;
+                        arrayA[tempArrayA[i]]--;
+                        arrayA[tempArrayB[i]]++;
                     }
                 }
-                k --;
+                k--;
             }
             int max = 0;
             int maxId = 0;
             int j = 1;
             while (j < n + 1) {
-                int tempNum =  Math.abs(arrayA[j]);
-                if (arrayB[j] == 1 && tempNum == num ) {
-                	max++;
-                	maxId = j;
+                int tempNum = Math.abs(arrayA[j]);
+                if (arrayB[j] == 1 && tempNum == num) {
+                    max++;
+                    maxId = j;
                 }
                 j++;
             }
@@ -63,13 +72,13 @@ public class Main {
 }
 
 /**************************************************************
-	Problem: 1486
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:640 ms
-	Memory:106776 kb
-****************************************************************/
+ Problem: 1486
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:640 ms
+ Memory:106776 kb
+ ****************************************************************/
 
 
-                        
+

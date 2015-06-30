@@ -1,6 +1,16 @@
 
+// 题目1072：有多少不同的面值组合？
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:53
+ * @url:http://ac.jobdu.com/problem.php?pid=1072
+ */
+
 import java.util.ArrayList;
 import java.util.List;
+
 /**
  * @ClassName: Main1046
  * @Description: TODO
@@ -10,10 +20,10 @@ import java.util.List;
  * @version 3.0.0
  */
 public class Main {
-	 /*
+    /*
      * 1072
      */
-    public static void main(String[] args) {
+public static void main(String[] args) {
     	
     	int a = 8;
     	int b = 10;
@@ -31,16 +41,15 @@ public class Main {
 			}
 		}
     	System.out.println(arrayList.size()-1);
-    }
-}
+    }}
 /**************************************************************
-	Problem: 1072
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:70 ms
-	Memory:14540 kb
-****************************************************************/
+ Problem: 1072
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:70 ms
+ Memory:14540 kb
+ ****************************************************************/
 
 
-                        
+

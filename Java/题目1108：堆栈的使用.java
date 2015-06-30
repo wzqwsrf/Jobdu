@@ -1,12 +1,21 @@
 
+// 题目1108：堆栈的使用
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:53
+ * @url:http://ac.jobdu.com/problem.php?pid=1108
+ */
+
 import java.util.Scanner;
 import java.util.Stack;
 
 public class Main {
-	/*
-	 * 1108
-	 */
-	public static void main(String[] args) throws Exception{
+    /*
+     * 1108
+     */
+public static void main(String[] args) throws Exception{
 		Scanner scanner = new Scanner(System.in);
 		while (scanner.hasNextLine()) {
 			String n = scanner.nextLine().trim();
@@ -40,16 +49,15 @@ public class Main {
 			System.out.println();
 		}
 	}
-	   
 }
 /**************************************************************
-	Problem: 1108
-	User: wzqwsrf
-	Language: Java
-	Result: Accepted
-	Time:1050 ms
-	Memory:104080 kb
-****************************************************************/
+ Problem: 1108
+ User: wzqwsrf
+ Language: Java
+ Result: Accepted
+ Time:1050 ms
+ Memory:104080 kb
+ ****************************************************************/
 
 
-                        
+

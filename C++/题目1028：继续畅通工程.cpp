@@ -1,31 +1,42 @@
 
+// 题目1028：继续畅通工程
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:52
+ * @url:http://ac.jobdu.com/problem.php?pid=1028
+ * 解题思路参考csdn:http://blog.csdn.net/u013027996/article/details/17166819
+ */
+
 #include<stdio.h>
 #include<algorithm> 
+
 const int maxn = 102;
 const int maxm = 102;
 int parent[maxn];
 using namespace std;
-struct Node{
+struct Node {
     int start;
     int end;
     int value;
-}nodes[maxm];
-   
-int compare(Node node1 ,Node node2){
-    if(node1.value < node2.value){
+} nodes[maxm];
+
+int compare(Node node1, Node node2) {
+    if (node1.value < node2.value) {
         return 1;
     }
     return 0;
 }
-  
+
 int findParent(int f) {
-     while (parent[f] != f) {
+    while (parent[f] != f) {
         f = parent[f];
     }
     return f;
 }
- 
-void unionTwo(int f, int t) {          
+
+void unionTwo(int f, int t) {
     int a = findParent(f);
     int b = findParent(t);
     if (a == b)
@@ -36,60 +47,61 @@ void unionTwo(int f, int t) {
         parent[b] = a;
     }
 }
-   
-int main(){
-  
+
+int main() {
+
     int n;
     int m;
-    while(scanf("%d",&n)!=EOF){
-		if(n == 0){
-			break;
-		}
-		m = (n-1)*n/2;
-        int i = 0;
-        for(i=0; i < m; i++){
-			int state,value;
-            scanf("%d%d%d%d" , &nodes[i].start, &nodes[i].end, &value, &state);
-			if(state == 1){
-				nodes[i].value = 0;
-			}else{
-				nodes[i].value = value;
-			}
+    while (scanf("%d", &n) != EOF) {
+        if (n == 0) {
+            break;
         }
-        sort(nodes,nodes+m,compare);
-        for(i = 1; i < n+1 ; i++){
+        m = (n - 1) * n / 2;
+        int i = 0;
+        for (i = 0; i < m; i++) {
+            int state, value;
+            scanf("%d%d%d%d", &nodes[i].start, &nodes[i].end, &value, &state);
+            if (state == 1) {
+                nodes[i].value = 0;
+            } else {
+                nodes[i].value = value;
+            }
+        }
+        sort(nodes, nodes + m, compare);
+        for (i = 1; i < n + 1; i++) {
             parent[i] = i;
         }
         int minValue = 0;
-		int count = 0;
+        int count = 0;
         for (i = 0; i < m; i++) {
-			if (findParent(nodes[i].start) != findParent(nodes[i].end)) {
-				unionTwo(nodes[i].start,nodes[i].end);
+            if (findParent(nodes[i].start) != findParent(nodes[i].end)) {
+                unionTwo(nodes[i].start, nodes[i].end);
                 minValue += nodes[i].value;
-				count++;
-				if(count == n-1){
-					break;
-				}
+                count++;
+                if (count == n - 1) {
+                    break;
+                }
             }
         }
-		if(count < n-1){
-			printf("?\n");
-		}else{
-			printf("%d\n", minValue);  
-		}
-        
+        if (count < n - 1) {
+            printf("?\n");
+        } else {
+            printf("%d\n", minValue);
+        }
+
     }
     return 0;
 }
-  
+
 /**************************************************************
-	Problem: 1028
-	User: wangzhenqing
-	Language: C++
-	Result: Accepted
-	Time:20 ms
-	Memory:1024 kb
+Problem: 1028
+User: wangzhenqing
+Language: C++
+Result: Accepted
+Time:20 ms
+Memory:1024 kb
 ****************************************************************/
 
 
                         
+

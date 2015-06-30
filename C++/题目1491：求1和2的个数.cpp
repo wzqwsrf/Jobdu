@@ -1,15 +1,26 @@
 
+// 题目1491：求1和2的个数
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:55
+ * @url:http://ac.jobdu.com/problem.php?pid=1491
+ * 解题思路参考csdn:http://blog.csdn.net/u013027996/article/details/17128027
+ */
+
 #include <stdio.h>
 #include <string.h>
- 
+
 const int mod = 20123;
 int len;
 int i;
 char array[1000];
-int modValue(int n){
+
+int modValue(int n) {
     return n % mod;
 }
- 
+
 int calCount(int num) {
     int k = len - 1;
     int factor = 1;
@@ -21,40 +32,41 @@ int calCount(int num) {
         for (i = 0; i < k; i++) {
             highNum = modValue(modValue(highNum * 10) + (array[i] - '0'));
         }
-        for (i = k+1; i < len; i++) {
+        for (i = k + 1; i < len; i++) {
             lowNum = modValue(modValue(lowNum * 10) + array[i] - '0');
         }
         currNum = array[k] - '0';
-        if (currNum < num){
+        if (currNum < num) {
             count = modValue(count + highNum * factor);
-        }else if (currNum == num) {
+        } else if (currNum == num) {
             count = modValue(count + highNum * factor + lowNum + 1);
-        }else if (currNum > num) {
+        } else if (currNum > num) {
             count = modValue(count + (highNum + 1) * factor);
         }
-              
+
         factor = modValue(factor * 10);
         k--;
     }
     return count;
 }
- 
-int main(){
-     
-    while(scanf("%s",&array) != EOF){
+
+int main() {
+
+    while (scanf("%s", &array) != EOF) {
         len = strlen(array);
-        printf("%d\n",modValue(calCount(1) + calCount(2)));
+        printf("%d\n", modValue(calCount(1) + calCount(2)));
     }
     return 0;
 }
 /**************************************************************
-	Problem: 1491
-	User: wangzhenqing
-	Language: C++
-	Result: Accepted
-	Time:10 ms
-	Memory:1020 kb
+Problem: 1491
+User: wangzhenqing
+Language: C++
+Result: Accepted
+Time:10 ms
+Memory:1020 kb
 ****************************************************************/
 
 
                         
+

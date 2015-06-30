@@ -1,50 +1,62 @@
 
+// 题目1470：调整方阵
+
+/**
+ * @author:wangzq
+ * @email:wangzhenqing1008@163.com
+ * @date:2015-06-30 11:01:55
+ * @url:http://ac.jobdu.com/problem.php?pid=1470
+ */
+
+import java.io.BufferedReader;
 #include <stdio.h>
+
 const int maxn = 12;
 int matrix[maxn][maxn];
-int n,i,j;
+int n, i, j;
 
-int main(){
-    while(scanf("%d",&n) != EOF){
-		for(i = 0; i < n; i++){
-			for(j = 0; j < n; j++){
-				scanf("%d",&matrix[i][j]);
-			}
-		}
-		for (j = 0; j < n; j++) {
-			int maxValue = matrix[j][j];
+int main() {
+    while (scanf("%d", &n) != EOF) {
+        for (i = 0; i < n; i++) {
+            for (j = 0; j < n; j++) {
+                scanf("%d", &matrix[i][j]);
+            }
+        }
+        for (j = 0; j < n; j++) {
+            int maxValue = matrix[j][j];
             int maxCol = j;
-            for (i = j+1; i < n; i++) {
-				if (matrix[i][j] > maxValue) {
-					maxValue = matrix[i][j];
+            for (i = j + 1; i < n; i++) {
+                if (matrix[i][j] > maxValue) {
+                    maxValue = matrix[i][j];
                     maxCol = i;
                 }
             }
             for (i = 0; i < n; i++) {
-				int temp = matrix[j][i];
+                int temp = matrix[j][i];
                 matrix[j][i] = matrix[maxCol][i];
                 matrix[maxCol][i] = temp;
             }
         }
         for (int i = 0; i < n; i++) {
-			for (int j = 0; j < n-1; j++) {
-				printf("%d ",matrix[i][j]);
+            for (int j = 0; j < n - 1; j++) {
+                printf("%d ", matrix[i][j]);
             }
-			printf("%d",matrix[i][n-1]);
+            printf("%d", matrix[i][n - 1]);
             printf("\n");
-		}
+        }
     }
     return 0;
 }
 
 /**************************************************************
-	Problem: 1470
-	User: wangzhenqing
-	Language: C++
-	Result: Accepted
-	Time:0 ms
-	Memory:1020 kb
+Problem: 1470
+User: wangzhenqing
+Language: C++
+Result: Accepted
+Time:0 ms
+Memory:1020 kb
 ****************************************************************/
 
 
                         
+

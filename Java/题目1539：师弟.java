@@ -6,6 +6,7 @@
  * @email:wangzhenqing1008@163.com
  * @date:2015-06-30 11:01:56
  * @url:http://ac.jobdu.com/problem.php?pid=1539
+ * 解题思路参考csdn:http://blog.csdn.net/u013027996/article/details/17581157
  */
 
 import java.io.BufferedReader;
@@ -128,6 +129,7 @@ private static int bfs(int[] minLen1, int[] minLen2, int len) {
  Time:1980 ms
  Memory:44684 kb
  ****************************************************************/
+
 
 
 

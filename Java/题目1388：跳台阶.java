@@ -6,6 +6,7 @@
  * @email:wangzhenqing1008@163.com
  * @date:2015-06-30 11:01:54
  * @url:http://ac.jobdu.com/problem.php?pid=1388
+ * 解题思路参考csdn:http://blog.csdn.net/u013027996/article/details/38038747
  */
 
 import java.io.StreamTokenizer;
@@ -44,6 +45,7 @@ public class Main {
  Time:70 ms
  Memory:14532 kb
  ****************************************************************/
+
 
 
 

@@ -6,6 +6,7 @@
  * @email:wangzhenqing1008@163.com
  * @date:2015-06-30 11:01:53
  * @url:http://ac.jobdu.com/problem.php?pid=1117
+ * 解题思路参考csdn:http://blog.csdn.net/u013027996/article/details/17222485
  */
 
 import java.io.BufferedReader;
@@ -60,6 +61,7 @@ public static void main(String[] args) throws Exception {
  Time:1350 ms
  Memory:82300 kb
  ****************************************************************/
+
 
 
 

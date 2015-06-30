@@ -6,6 +6,7 @@
  * @email:wangzhenqing1008@163.com
  * @date:2015-06-30 11:01:55
  * @url:http://ac.jobdu.com/problem.php?pid=1484
+ * 解题思路参考csdn:http://blog.csdn.net/u013027996/article/details/27695553
  */
 
 import java.util.Scanner;
@@ -52,6 +53,7 @@ public class Main {
  Time:230 ms
  Memory:26504 kb
  ****************************************************************/
+
 
 
 

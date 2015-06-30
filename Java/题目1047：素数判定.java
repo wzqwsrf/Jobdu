@@ -6,6 +6,7 @@
  * @email:wangzhenqing1008@163.com
  * @date:2015-06-30 11:01:52
  * @url:http://ac.jobdu.com/problem.php?pid=1047
+ * 解题思路参考csdn:http://blog.csdn.net/u013027996/article/details/36180571
  */
 
 import java.io.BufferedReader;
@@ -44,6 +45,7 @@ public class Main {
  Time:60 ms
  Memory:14552 kb
  ****************************************************************/
+
 
 
 

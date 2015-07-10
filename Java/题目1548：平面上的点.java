@@ -5,8 +5,7 @@
  * @author:wangzq
  * @email:wangzhenqing1008@163.com
  * @date:2015-06-30 11:01:56
- * @url:http://ac.jobdu.com/problem.php?pid=1548
- * 解题思路参考csdn:http://blog.csdn.net/u013027996/article/details/19914971
+ * @url:http://ac.jobdu.com/problem.php?pid=1548 解题思路参考csdn:http://blog.csdn.net/u013027996/article/details/19914971
  */
 
 import java.io.BufferedReader;
@@ -20,11 +19,11 @@ public class Main {
     /*
      * 1548
      */
-public static void main(String[] args) throws IOException {
-        StreamTokenizer st = new StreamTokenizer(new BufferedReader(  
-                new InputStreamReader(System.in)));  
-        while (st.nextToken() != StreamTokenizer.TT_EOF) {  
-            int n = (int)st.nval;
+    public static void main(String[] args) throws IOException {
+        StreamTokenizer st = new StreamTokenizer(new BufferedReader(
+                new InputStreamReader(System.in)));
+        while (st.nextToken() != StreamTokenizer.TT_EOF) {
+            int n = (int) st.nval;
             if (n == 0) {
                 System.out.println(n);
                 continue;
@@ -34,17 +33,17 @@ public static void main(String[] args) throws IOException {
             int k = 0;
             for (int i = 0; i < n; i++) {
                 st.nextToken();
-                int x = (int)st.nval;
+                int x = (int) st.nval;
                 st.nextToken();
-                int y = (int)st.nval;
+                int y = (int) st.nval;
                 String xy = x + "_" + y;
                 int num = 1;
                 if (numMap.containsKey(xy)) {
-					num += numMap.get(xy);
-				}else {
-					nodes[k] = new Node(x, y);
-					k++;
-				}
+                    num += numMap.get(xy);
+                } else {
+                    nodes[k] = new Node(x, y);
+                    k++;
+                }
                 numMap.put(xy, num);
             }
             if (n == 1 || n == 2) {
@@ -53,27 +52,28 @@ public static void main(String[] args) throws IOException {
             }
             n = k;
             int maxNum = 0;
-            for(int i = 0; i < n; i++){  
-                for(int j = i+1; j < n; j++){  
+            for (int i = 0; i < n; i++) {
+                for (int j = i + 1; j < n; j++) {
                     int tempNum = 0;
-                    tempNum += numMap.get(nodes[i].x + "_" + nodes[i].y) 
-                    		   + numMap.get(nodes[j].x + "_" + nodes[j].y);
-                    for (k = j+1; k < n; k++) {  
-                        int num1 = (nodes[k].y - nodes[i].y)*(nodes[j].x - nodes[i].x);  
-                        int num2 = (nodes[j].y - nodes[i].y)*(nodes[k].x - nodes[i].x);  
-                        if (num1 == num2) {  
-                            tempNum += numMap.get(nodes[k].x + "_" + nodes[k].y);  
-                        }  
-                    }  
-                    maxNum = Math.max(tempNum, maxNum);  
-                }  
-            } 
-            for ( int value : numMap.values()) {
-            	maxNum = Math.max(value, maxNum);
-			}
+                    tempNum += numMap.get(nodes[i].x + "_" + nodes[i].y)
+                            + numMap.get(nodes[j].x + "_" + nodes[j].y);
+                    for (k = j + 1; k < n; k++) {
+                        int num1 = (nodes[k].y - nodes[i].y) * (nodes[j].x - nodes[i].x);
+                        int num2 = (nodes[j].y - nodes[i].y) * (nodes[k].x - nodes[i].x);
+                        if (num1 == num2) {
+                            tempNum += numMap.get(nodes[k].x + "_" + nodes[k].y);
+                        }
+                    }
+                    maxNum = Math.max(tempNum, maxNum);
+                }
+            }
+            for (int value : numMap.values()) {
+                maxNum = Math.max(value, maxNum);
+            }
             System.out.println(maxNum);
         }
     }
+
     public static class Node {
         int x;
 

@@ -1,14 +1,3 @@
-
-// 题目1521：二叉树的镜像
-
-/**
- * @author:wangzq
- * @email:wangzhenqing1008@163.com
- * @date:2015-06-30 11:01:55
- * @url:http://ac.jobdu.com/problem.php?pid=1521
- * 解题思路参考csdn:http://blog.csdn.net/u013027996/article/details/25214443
- */
-
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.StreamTokenizer;
@@ -28,73 +17,64 @@ public class Main {
                 System.out.println("NULL");
                 continue;
             }
-            BinaSortTree[] biTrees = new BinaSortTree[n + 1];
+            TreeNode[] nodes = new TreeNode[n + 1];
             for (int i = 1; i < n + 1; i++) {
                 st.nextToken();
-                biTrees[i] = new BinaSortTree((int) st.nval);
+                nodes[i] = new TreeNode((int) st.nval);
             }
             for (int i = 1; i < n + 1; i++) {
                 st.nextToken();
                 String operate = st.sval;
                 if (operate.equals("d")) {
                     st.nextToken();
-                    biTrees[i].lchild = biTrees[(int) st.nval];
+                    nodes[i].left = nodes[(int) st.nval];
                     st.nextToken();
-                    biTrees[i].rchild = biTrees[(int) st.nval];
+                    nodes[i].right = nodes[(int) st.nval];
                 } else if (operate.equals("l")) {
                     st.nextToken();
-                    biTrees[i].lchild = biTrees[(int) st.nval];
+                    nodes[i].left = nodes[(int) st.nval];
                 } else if (operate.equals("r")) {
                     st.nextToken();
-                    biTrees[i].rchild = biTrees[(int) st.nval];
+                    nodes[i].right = nodes[(int) st.nval];
                 }
             }
 
-            mirror(biTrees[1]);
+            mirror(nodes[1]);
             sb = new StringBuffer();
-            preOrder(biTrees[1]);
+            preOrder(nodes[1]);
             System.out.println(sb.toString().trim());
 
         }
     }
 
-    private static void mirror(BinaSortTree binaSortTree) {
-        if (binaSortTree == null) {
+    private static TreeNode mirror(TreeNode root) {
+        if (root == null) {
+            return null;
+        }
+        TreeNode node = root.left;
+        root.left = mirror(root.right);
+        root.right = mirror(node);
+        return root;
+    }
+
+    private static void preOrder(TreeNode root) {
+        if (root == null) {
             return;
         }
-        BinaSortTree biTree = binaSortTree.lchild;
-        binaSortTree.lchild = binaSortTree.rchild;
-        binaSortTree.rchild = biTree;
-        mirror(binaSortTree.lchild);
-        mirror(binaSortTree.rchild);
+        sb.append(root.val + " ");
+        preOrder(root.left);
+        preOrder(root.right);
     }
 
-    private static void preOrder(BinaSortTree biTree) {
-        sb.append(biTree.value + " ");
-        BinaSortTree leftTree = biTree.lchild;
-        if (leftTree != null) {
-            preOrder(leftTree);
-        }
+    private static class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
 
-        BinaSortTree rightTree = biTree.rchild;
-        if (rightTree != null) {
-            preOrder(rightTree);
+        TreeNode(int x) {
+            val = x;
         }
     }
-
-    private static class BinaSortTree {
-        private BinaSortTree lchild;
-
-        private BinaSortTree rchild;
-
-        private int value;
-
-        public BinaSortTree(int value) {
-            super();
-            this.value = value;
-        }
-    }
-
 }
 /**************************************************************
  Problem: 1521
@@ -102,9 +82,5 @@ public class Main {
  Language: Java
  Result: Accepted
  Time:350 ms
- Memory:14768 kb
+ Memory:14656 kb
  ****************************************************************/
-
-
-
-

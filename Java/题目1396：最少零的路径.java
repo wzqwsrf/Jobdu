@@ -141,8 +141,7 @@ public class Main {
         }
         return dp;
     }
-
-
+    
     private static int countFactor(int num, int factor) {
         int count = 0;
         if (num == 0) {

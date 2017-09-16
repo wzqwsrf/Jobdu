@@ -45,7 +45,8 @@ int main() {
                 int size2 = adj[u].size();
                 for (int j = 0; j < size2; j++) {
                     int v = adj[u][j];
-                    for(vector<int>::iterator it = adj[v].begin(); it != adj[v].end();){
+                    for(vector<int>::iterator it = adj[v].begin();
+                                                it != adj[v].end();){
                         if(* it == u){
                              it = adj[v].erase(it); //不能写成arr.erase(it);
                         }else{

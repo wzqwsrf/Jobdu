@@ -101,7 +101,6 @@ public class Main {
         }
         if (num != n) {
             return -1;
-
         }
 //        System.out.println(resCost);
         int weight = Integer.MAX_VALUE;

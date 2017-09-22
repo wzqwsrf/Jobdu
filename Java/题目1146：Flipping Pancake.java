@@ -12,7 +12,7 @@ import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.StreamTokenizer;
 
-//最短路径
+//翻转的次数最少
 public class Main {
     /*
      * 1249
